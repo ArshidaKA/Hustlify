@@ -14,6 +14,7 @@ function MainLayout() {
       }}
     >
       <Header />
+      
       <div className="pt-25 bg-black/80 min-h-screen">
         {/* Add overlay with black background to make content readable */}
         <Outlet />
