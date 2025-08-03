@@ -233,10 +233,11 @@
 .mob-work-section {
   background-color: black;
   padding: 2rem;
+  padding-top: 5rem;
 }
 
 .mob-work-section__title {
-  font-size: 1.7rem;
+  font-size: 2.5rem;
   font-weight: 600;
   color: #fff;
   text-align: start;
@@ -256,7 +257,7 @@
 }
 
 .mob-work-section__item-image-container {
-  height: 50%;
+  height: 30%;
 }
 
 .mob-work-section__item-image-container img {
@@ -266,7 +267,7 @@
 }
 
 .mob-work-section__item-pills {
-  display: flex;
+  /* display: flex; */
   flex-wrap: wrap;
   gap: 1rem;
 }
@@ -274,7 +275,7 @@
 .mob-work-section__pill-item {
   color: white;
   background-color: black;
-  border: 1px solid #0000ff;
+  border: 1px solid #66666e;
   border-radius: 100px;
   justify-content: center;
   align-items: center;

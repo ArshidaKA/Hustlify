@@ -31,12 +31,12 @@ const textVariants = {
 
 function SalesFaq() {
   return (
-    <section className="bg-white text-black py-24 px-6 md:px-16  rounded-4xl font-sans">
-      <div className="max-w-4xl mx-auto flex space-y-10">
+    <section className="bg-white text-black py-16 px-4 sm:px-6 md:px-12 lg:px-20 font-sans">
+      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-10">
         {/* Heading */}
-        <div className="space-y-2 ">
+        <div className="lg:w-1/2 space-y-4">
           <p className="uppercase text-sm text-gray-500">FAQ</p>
-          <h2 className="text-4xl md:text-6xl font-extrabold leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-snug">
             Got questions? <br />
             We’ve got <span className="text-gray-600">answers</span>
           </h2>
@@ -48,14 +48,14 @@ function SalesFaq() {
           whileInView="visible"
           viewport={{ once: true }}
           variants={textVariants}
-          className="space-y-4"
+          className="lg:w-1/2 space-y-4 w-full"
         >
           {faqData.map((item, idx) => (
             <details
               key={idx}
-              className="bg-gray-100 px-6 py-4 rounded-lg border border-gray-200 cursor-pointer transition-all"
+              className="bg-gray-100 px-5 py-4 rounded-lg border border-gray-200 cursor-pointer transition-all"
             >
-              <summary className="font-semibold text-lg text-gray-800 cursor-pointer">
+              <summary className="font-semibold text-base sm:text-lg text-gray-800">
                 {item.question}
               </summary>
               <p className="text-sm text-gray-600 mt-2">{item.answer}</p>

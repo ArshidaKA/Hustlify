@@ -36,7 +36,7 @@ const servicesData = [
 
 const Services = () => {
   return (
-    <div className="w-full px-4 py-16">
+    <div className="w-full px-4 pt-16 md:py-20">
       {/* Header */}
       <div className="text-center mb-10">
         {/* <h1 className="text-4xl font-bold mb-2">What You’ll Master with Hustlify</h1> */}

@@ -36,11 +36,11 @@ const ContactSection = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-6xl font-extrabold mb-4">
-                Get <span className="text-gray-700">in Touch</span>
+                Get <span className="text-gray-700">in Touch.</span>
               </h2>
-              <p className="mb-6 text-gray-700 text-base sm:text-lg leading-relaxed">
+              {/* <p className="mb-6 text-gray-700 text-base sm:text-lg leading-relaxed">
                 Have questions or ready to collaborate? Reach out and we’ll get back to you shortly. We’re excited to hear from you!
-              </p>
+              </p> */}
 
               <div className="mb-6">
                 <h4 className="font-semibold text-base sm:text-lg flex items-center gap-2">

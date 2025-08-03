@@ -16,7 +16,7 @@ import GoogleGeminiScrollWrapper from '../../components/ui/geminiwrapper'
 const hustlifyTimeline = [
   {
     title: "Idea Sparked",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-LjDX_WChuKths8ccpuIR1ot1L3KWRfg4Jg&s", // Replace with your actual path
+    image: "https://www.betterteam.com/images/sales-manager-job-description-6000x4000-20201128.jpeg?crop=40:21,smart&width=1200&dpr=2&format=pjpg&auto=webp&quality=85&format=jpg&quality=85", // Replace with your actual path
     content: (
       <p className="text-neutral-600 dark:text-neutral-300">
         Hustlify was born out of a need to empower individuals with actionable sales knowledge. The idea was to combine mentorship, digital tools, and a vibrant community to help closers scale their impact.
@@ -43,7 +43,7 @@ const hustlifyTimeline = [
   },
   {
     title: "Beyond Sales",
-    image: "https://media.istockphoto.com/id/950986656/photo/business-finance-accounting-contract-advisor-investment-consulting-marketing-plan-for-the.jpg?s=612x612&w=0&k=20&c=U-y6cADCby4QwENFptPrVcK_MplesqZmnDxUMMkJZvM=",
+    image: "https://connectionsny.com/media/video_posters/sales.jpg",
     content: (
       <p className="text-neutral-600 dark:text-neutral-300">
         We started offering workshops on branding, personal funnels, and high-ticket offers — helping closers not just sell, but build their own legacy.
@@ -70,7 +70,7 @@ function Home() {
 <SyncScrollMobile/>
 
 <SalesCardsSection/>
-<GoogleGeminiScrollWrapper />
+{/* <GoogleGeminiScrollWrapper /> */}
 
 <div className='py-16'>
 

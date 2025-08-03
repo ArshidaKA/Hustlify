@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 
 const SyncScrollMobile = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -42,14 +42,12 @@ const SyncScrollMobile = () => {
     const scrollTop = container.scrollTop;
     const scrollHeight = container.scrollHeight - container.clientHeight;
     const scrollPercent = scrollTop / scrollHeight;
-    
+
     setScrollPosition(scrollPercent);
-    
-    // Determine current section
+
     const sectionIndex = Math.floor(scrollPercent * sections.length);
     setCurrentSection(Math.min(sectionIndex, sections.length - 1));
-    
-    // Sync mobile content scroll
+
     if (mobileContentRef.current) {
       const mobileScrollHeight = mobileContentRef.current.scrollHeight - mobileContentRef.current.clientHeight;
       mobileContentRef.current.scrollTop = scrollPercent * mobileScrollHeight;
@@ -58,104 +56,72 @@ const SyncScrollMobile = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 overflow-hidden">
-      <div 
+      <div
         ref={containerRef}
         className="h-screen overflow-y-auto scrollbar-hide"
         onScroll={handleScroll}
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >
-<div style={{ height: `100vh`
-}}>
-          {/* Dynamic Content Section */}
-          <div className="h-screen flex items-center justify-between px-8 lg:px-16 relative">
-            {/* Dynamic Left Content */}
-            <div className="flex-1 max-w-2xl relative z-10">
-              <div className="mb-8 transform transition-all duration-700 ease-out">
-                <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-bold bg-gradient-to-r from-gray-800 to-gray-700 text-white border border-gray-600 shadow-lg">
-                  <div className="w-2 h-2 bg-yellow-400 rounded-full mr-2 animate-pulse"></div>
-                  {sections[currentSection].tag}
-                </span>
-              </div>
-              
-              <div 
-                key={currentSection}
-                className="transform transition-all duration-1000 ease-out"
-                style={{
-                  transform: `translateY(${scrollPosition * 30}px)`,
-                  opacity: 1 - (scrollPosition % 0.25) * 1.5
-                }}
-              >
-                <h1 className="text-6xl lg:text-8xl font-black text-white mb-4 leading-none tracking-tight">
-                  {sections[currentSection].title}
-                </h1>
-                <h2 className={`text-4xl lg:text-6xl font-light mb-8 bg-gradient-to-r ${sections[currentSection].accent} bg-clip-text text-transparent tracking-wide`}>
-                  {sections[currentSection].subtitle}
-                </h2>
-                
-                <p className="text-xl text-gray-300 leading-relaxed max-w-lg font-light">
-                  {sections[currentSection].description}
-                </p>
+        <div className="h-full min-h-screen flex flex-col lg:flex-row items-center justify-between px-6 lg:px-16 py-12 gap-12">
+          {/* Left Section */}
+          <div className="w-full lg:w-1/2 max-w-2xl text-center lg:text-left relative z-10">
+            <div className="mb-4">
+              <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-bold bg-gradient-to-r from-gray-800 to-gray-700 text-white border border-gray-600 shadow-lg">
+                <div className="w-2 h-2 bg-yellow-400 rounded-full mr-2 animate-pulse"></div>
+                {sections[currentSection].tag}
+              </span>
+            </div>
 
-                {/* CTA Button */}
-                <div className="mt-8">
-                  <button className={`px-8 py-4 rounded-xl font-bold text-black bg-gradient-to-r ${sections[currentSection].accent} shadow-2xl transform hover:scale-105 transition-all duration-300`}>
-                    START YOUR JOURNEY →
-                  </button>
-                </div>
-              </div>
+            <div key={currentSection} className="transition-all duration-1000 ease-out">
+              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black text-white mb-4 leading-tight">
+                {sections[currentSection].title}
+              </h1>
+              <h2 className={`text-2xl sm:text-4xl lg:text-5xl font-light mb-6 bg-gradient-to-r ${sections[currentSection].accent} bg-clip-text text-transparent`}>
+                {sections[currentSection].subtitle}
+              </h2>
+              <p className="text-base sm:text-lg text-gray-300 leading-relaxed max-w-xl mx-auto lg:mx-0">
+                {sections[currentSection].description}
+              </p>
 
-              {/* Progress indicators */}
-              <div className="absolute bottom-16 left-0 flex space-x-3">
-                {sections.map((_, index) => (
-                  <div
-                    key={index}
-                    className={`h-1 rounded-full transition-all duration-500 ${
-                      index === currentSection 
-                        ? 'w-12 bg-gradient-to-r from-yellow-400 to-orange-500' 
-                        : 'w-6 bg-gray-600'
-                    }`}
-                  />
-                ))}
+              <div className="mt-6">
+                <button className={`px-6 py-3 rounded-xl font-bold text-black bg-gradient-to-r ${sections[currentSection].accent} shadow-xl transition-transform transform hover:scale-105`}>
+                  START YOUR JOURNEY →
+                </button>
               </div>
             </div>
 
-            {/* Mobile Mockup */}
-            <div className="flex-1 flex justify-center items-center relative">
-              {/* Floating background elements */}
-              <div 
-                className="absolute -left-20 top-1/4 w-32 h-32 bg-gradient-to-r from-yellow-500/10 to-orange-400/10 backdrop-blur-xl rounded-full border border-yellow-500/20"
-                style={{
-                  transform: `translateY(${scrollPosition * 120}px) rotate(${scrollPosition * 180}deg)`,
-                  filter: `blur(${scrollPosition * 2}px)`
-                }}
-              ></div>
-              <div 
-                className="absolute -right-16 top-2/3 w-24 h-24 bg-gradient-to-r from-blue-400/10 to-cyan-300/10 backdrop-blur-xl rounded-2xl border border-blue-400/20"
-                style={{
-                  transform: `translateY(${-scrollPosition * 80}px) rotate(${-scrollPosition * 90}deg)`,
-                  filter: `blur(${scrollPosition * 1.5}px)`
-                }}
-              ></div>
+            <div className="mt-6 flex justify-center lg:justify-start space-x-2">
+              {sections.map((_, index) => (
+                <div key={index} className={`h-1 rounded-full transition-all duration-500 ${index === currentSection ? 'w-10 bg-gradient-to-r from-yellow-400 to-orange-500' : 'w-5 bg-gray-600'}`} />
+              ))}
+            </div>
+          </div>
 
-              {/* Phone Frame */}
-              <div className="relative">
-                <div className="w-80 h-[640px] bg-gradient-to-b from-gray-800 to-black rounded-[3rem] p-2 shadow-2xl border border-gray-700">
-                  <div className="w-full h-full bg-gradient-to-b from-gray-100 to-gray-50 rounded-[2.5rem] overflow-hidden relative">
-                    {/* Status Bar */}
-                    <div className="bg-gradient-to-r from-gray-900 to-black px-6 py-3 flex justify-between items-center text-white">
-                      <div className="flex items-center space-x-2">
-                        <div className="w-8 h-8 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center">
-                          <span className="text-black text-xs font-black">H</span>
-                        </div>
+          {/* Right Section - Mobile Mockup */}
+          <div className="w-full lg:w-1/2 flex justify-center items-center relative">
+            <div className="w-full max-w-xs sm:max-w-sm md:max-w-md">
+              <div className="bg-gradient-to-b from-gray-800 to-black rounded-[3rem] p-2 shadow-2xl border border-gray-700">
+                <div className="w-full h-[600px] bg-gradient-to-b from-gray-100 to-gray-50 rounded-[2.5rem] overflow-hidden relative">
+                  {/* Header */}
+                  <div className="bg-gradient-to-r from-gray-900 to-black px-4 py-2 flex justify-between items-center text-white text-sm">
+                    <div className="flex items-center space-x-2">
+                      <div className="w-6 h-6 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center">
+                        <span className="text-black font-black">H</span>
                       </div>
-                      <div className="flex items-center space-x-2">
-                        <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
-                        <span className="text-sm font-bold">HUSTLIFY</span>
-                      </div>
+                      <span className="font-semibold">HUSTLIFY</span>
                     </div>
+                  </div>
 
-                    {/* Mobile Content */}
-                    <div 
+                  {/* Scrollable Mobile Content */}
+                  <div
+                    ref={mobileContentRef}
+                    className="h-full overflow-y-auto scrollbar-hide bg-gradient-to-b from-white to-gray-50 px-4 py-6"
+                    style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                  >
+                    {/* You can reuse the exact content block you had here — it's already responsive.
+                        If you want, I can help modularize that part into smaller components as well. */}
+                    {/* Insert the mobile dynamic content block here */}
+                      <div 
                       ref={mobileContentRef}
                       className="h-full overflow-y-auto scrollbar-hide bg-gradient-to-b from-white to-gray-50"
                       style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
@@ -351,23 +317,21 @@ const SyncScrollMobile = () => {
                         </div>
                       </div>
                     </div>
+                  </div>
 
-                    {/* Bottom Navigation */}
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-r from-gray-900 to-black border-t border-gray-700 px-6 py-3">
-                      <div className="flex justify-between text-white">
-                        <div className="text-center">
-                          <div className="w-6 h-6 mx-auto mb-1 text-yellow-400">🏠</div>
-                          <span className="text-xs">Dashboard</span>
-                        </div>
-                        <div className="text-center">
-                          <div className="w-6 h-6 mx-auto mb-1 text-blue-400">📈</div>
-                          <span className="text-xs">Progress</span>
-                        </div>
-                        <div className="text-center">
-                          <div className="w-6 h-6 mx-auto mb-1 text-green-400">💰</div>
-                          <span className="text-xs">Earnings</span>
-                        </div>
-                      </div>
+                  {/* Bottom Navigation */}
+                  <div className="absolute bottom-0 w-full bg-gradient-to-r from-gray-900 to-black border-t border-gray-700 px-4 py-2 flex justify-around text-xs text-white">
+                    <div className="text-center">
+                      <div className="text-yellow-400 mb-1">🏠</div>
+                      <span>Dashboard</span>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-blue-400 mb-1">📈</div>
+                      <span>Progress</span>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-green-400 mb-1">💰</div>
+                      <span>Earnings</span>
                     </div>
                   </div>
                 </div>
@@ -376,35 +340,8 @@ const SyncScrollMobile = () => {
           </div>
         </div>
       </div>
-{/* 
-      {/* Advanced Scroll Indicator - Hide when scroll is complete */}
-      {/* {scrollPosition < 0.95 && (
-        <div className="fixed right-8 top-1/2 transform -translate-y-1/2 w-2 h-40 bg-gradient-to-b from-gray-800 to-black rounded-full border border-gray-600 overflow-hidden">
-          <div 
-            className="w-full bg-gradient-to-b from-yellow-400 via-orange-500 to-yellow-600 rounded-full transition-all duration-500 ease-out shadow-lg"
-            style={{ height: `${scrollPosition * 100}%` }}
-          ></div>
-        </div>
-      )} */} 
 
-      {/* Floating Money Icons */}
-      <div className="fixed inset-0 pointer-events-none overflow-hidden">
-        {[...Array(8)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute text-yellow-400 opacity-20 text-xl"
-            style={{
-              left: `${15 + i * 12}%`,
-              top: `${25 + i * 8}%`,
-              transform: `translateY(${scrollPosition * (80 + i * 30)}px) translateX(${Math.sin(scrollPosition * Math.PI * 2 + i) * 30}px) rotate(${scrollPosition * 360}deg)`,
-              animationDelay: `${i * 0.3}s`
-            }}
-          >
-            {i % 2 === 0 ? '💰' : '📈'}
-          </div>
-        ))}
-      </div>
-
+      {/* Hide scrollbar for Webkit */}
       <style jsx>{`
         .scrollbar-hide::-webkit-scrollbar {
           display: none;

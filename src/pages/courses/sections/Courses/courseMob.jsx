@@ -4,52 +4,43 @@ import "./courses.css"
 
 export const MobWorkSection = () => {
   const items = [
-    {
-      image: "",
-      pills: ["Skymark", "Wilmouont"],
-      heading: "Hacien",
-      description:
-        "HACIEN is a premium tequila brand supplying high-end hospitality and retail locations worldwide. They approached Phunk to undertake a comprehensive design project comprising web, packaging, and marketing assets as well as 3D renders of their signature bottles.",
-      link: "https://www.phunk.co.uk/work/hacien",
-    },
-    {
-      image: "",
-      pills: ["Splash Screens", "Illustrations"],
-      heading: "Mobilleo",
-      description:
-        "Mobilleo is a SaaS solution making it easy for organisations to manage global business travel for their employees.  The team at Mobilleo approached Phunk to provide a range of design and illustration services, building on their existing brand, for use across their website and app.",
-      link: "https://www.phunk.co.uk/work/mobillio",
-    },
-    {
-      image: "",
-      pills: ["Webflow Development", "UI/UX Design"],
-      heading: "Mannson Freight",
-      description:
-        "Mannson Freight operates import and export consolidation services involving sea freight. They engaged Phunk to rebrand their corporate identity and develop a new higher-performance website, as well as a custom-built portal — MFS Pro— including ongoing support.",
-      link: "https://www.phunk.co.uk/work/mannson-freight",
-    },
-    {
-      image: "",
-      pills: ["Webflow Development", "UI/UX Design"],
-      heading: "BOX iQ",
-      description:
-        "BOXiQ Performance Center in Dubai is a globally recognised boxing gym — hosting icons like Tyson Fury and Oleksandr Usyk. Working with Phunk, they now have a high-quality digital presence to match the prestige of their brand.",
-      link: "https://www.phunk.co.uk/work/box-iq",
-    },
-    {
-      image: "",
-      pills: ["Webflow Development", "Visual Identity"],
-      heading: "The Honest Watch Dealer",
-      description:
-        "The Honest Watch Dealer is a luxury watch expert renowned for his popular YouTube channel, as well as founding The Luxury Watch Company. Charlie (his real name) engaged Phunk to develop a brand identity for his channel, with applications across a range of merchandise.",
-      link: "https://www.phunk.co.uk/work/honest-watch-dealer",
-    },
-  ];
-
+  {
+    image: "https://s44783.pcdn.co/in/wp-content/uploads/sites/3/2022/03/What-is-the-Difference-Between-Sales-and-Marekting-1.jpg.webp",
+    pills: ["2 Months Intensive Training", "Offline Classroom", "Sales Simulations"],
+    heading: "",
+    description:
+      "Kickstart your journey with 2 months of offline, high-intensity classroom training — 3-4 days a week. Experience real-time sales call breakdowns, live simulations, high-pressure challenge days, and continuous progress tracking with peer learning.",
+    link: "https://www.hustlify.in/sales-program", // Replace with actual link if available
+  },
+  {
+    image: "https://media.istockphoto.com/id/950986656/photo/business-finance-accounting-contract-advisor-investment-consulting-marketing-plan-for-the.jpg?s=612x612&w=0&k=20&c=U-y6cADCby4QwENFptPrVcK_MplesqZmnDxUMMkJZvM=",
+    pills: ["2 Months Internship", "CRM Tools", "Inbound & Outbound Sales"],
+    heading: "Real Internship",
+    description:
+      "Work directly with real companies for 2 months and gain hands-on experience in inbound and outbound selling. Learn to manage pipelines, handle leads, and track sales using CRM tools. Get weekly reviews and real-time feedback.",
+    link: "https://www.hustlify.in/sales-program",
+  },
+  {
+    image: "https://backend.glnk.com/storage/blog-image/Sales-Hack-How-to-Grow-Business-with-Steady-Sales-Flow-guest-post-1.jpeg",
+    pills: ["High-Ticket Sales", "Buyer Psychology", "Premium Product Positioning"],
+    heading: "What You’ll Master",
+    description:
+      "Understand how to sell products and services worth ₹50K+. Learn buyer behavior in premium markets, psychological triggers that influence decisions, urgency creation, and value stacking for maximum impact.",
+    link: "https://www.hustlify.in/sales-program",
+  },
+  {
+    image: "https://img.freepik.com/free-photo/group-people-working-out-business-plan-office_1303-15861.jpg",
+    pills: ["Inbound vs Outbound", "Closer’s Protocol", "Mock Deals & Objection Handling"],
+    heading: "The Closer’s Protocol",
+    description:
+      "Master Hustlify’s Closing Framework — from 'Hello' to 'Paid'. Build confidence in sales conversations, learn to handle objections effectively, and practice with mock deals and real-time simulations.",
+    link: "https://www.hustlify.in/sales-program",
+  },
+];
   return (
     <div className="mob-work-section">
       <div className="mob-work-section__header-container">
-        <h1 className="mob-work-section__title">Dive into the work.</h1>
+        <h1 className="mob-work-section__title">Course Structure.</h1>
       </div>
 
       <div className="mob-work-section__scroll-container">
@@ -80,10 +71,10 @@ export const MobWorkSection = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <div style={{ color: "white" }}>See full case study</div>
+              {/* <div style={{ color: "white" }}>See full case study</div>
               <div className="work-section__icon">
                 <GoArrowDownLeft />
-              </div>
+              </div> */}
             </a>
           </div>
         ))}

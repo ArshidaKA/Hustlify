@@ -32,7 +32,7 @@ const cards = [
 
 const SalesCardsSection = () => {
   return (
-    <div className="bg-transparent text-white py-20 px-4 md:px-28 font-sans relative z-10">
+    <div className="bg-transparent text-white pt-20 md:py-20 px-4 md:px-28 font-sans relative z-10">
       <div className="mb-16 max-w-3xl ">
         <h2 className="text-slate-100 text-4xl md:text-6xl mb-4 font-bold leading-tight font-[Poppins]">
           What You’ll Master <br/> at  <span className="text-gray-400">Hustlify?</span>

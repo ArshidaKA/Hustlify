@@ -2,7 +2,7 @@ import React from "react";
 
 const AnnualRecap = () => {
   return (
-    <section className="relative bg-black text-white py-20 px-4 sm:px-6 md:px-12 lg:px-20 rounded-3xl overflow-hidden shadow-2xl border border-gray-800">
+    <section className="relative bg-black text-white py-20  px-4 sm:px-6 md:px-12 lg:px-20 rounded-3xl overflow-hidden shadow-2xl border border-gray-800">
       {/* Background Overlay */}
       <div className="absolute inset-0 z-0 opacity-5">
         <img

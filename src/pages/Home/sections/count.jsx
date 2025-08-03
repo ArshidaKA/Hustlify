@@ -34,7 +34,7 @@ const stats = [
 
 const HustlifyStats = () => {
   return (
-    <section className="bg-white py-16 px-4 md:px-12 rounded-4xl">
+    <section className="bg-white py-16  mt-5 px-4 md:px-12 rounded-4xl">
       <h2 className="text-4xl font-[poppins] md:text-5xl font-bold text-center text-black mb-12">
         Our Numbers Speak <br className="hidden md:block" /> For Themselves
       </h2>

@@ -10,7 +10,7 @@ const Hero = () => {
     >
       <div className="absolute inset-0  bg-opacity-60 z-0" /> {/* Optional: dark overlay */}
 
-      <div className="relative z-10 grid md:grid-cols-2 gap-12 px-10 items-center">
+      <div className="relative z-10 grid md:grid-cols-2 gap-12 md:px-10 px-4 items-center">
         {/* Left Text Section */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -36,7 +36,7 @@ const Hero = () => {
             </button>
           </div>
 
-          <div className="flex flex-wrap gap-8 pt-6">
+<div className="hidden md:flex flex-wrap gap-8 pt-6">
             <div>
               <p className="text-2xl font-bold text-white font-[Poppins]">3X Faster</p>
               <p className="text-sm text-gray-400 font-[Poppins]">Sales Cycle Completion Time</p>
@@ -62,7 +62,7 @@ const Hero = () => {
               muted
               loop
               playsInline
-              className="w-full h-[80vh] object-cover rounded-lg"
+              className="w-full  md:h-[80vh] h-[40vh] object-cover rounded-lg"
             />
           </div>
         </motion.div>
