@@ -6,19 +6,23 @@ import ContactSection from '../components/Contact';
 
 function MainLayout() {
   return (
-    <div
-      className="min-h-screen bg-black text-white bg-cover bg-center"
-      style={{
-        backgroundImage: "url('https://img.freepik.com/premium-photo/black-background-dark-backdrop-smooth-wave-black-wallpaper_715671-1433.jpg')", // Replace with your image path
-        backgroundAttachment: 'fixed', // Optional: makes image stay while scrolling
-      }}
-    >
-      <Header />
-      
-      <div className="pt-25 bg-black/80 min-h-screen">
-        {/* Add overlay with black background to make content readable */}
-        <Outlet />
+    <div className="relative min-h-screen text-white overflow-x-hidden">
+      {/* Background Image Layer */}
+      <div className="fixed inset-0 -z-10">
+        <img
+          src="https://img.freepik.com/premium-photo/black-background-dark-backdrop-smooth-wave-black-wallpaper_715671-1433.jpg"
+          alt="background"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black opacity-80" /> {/* Optional black overlay */}
       </div>
+
+      <Header />
+
+      <main className="pt-24 min-h-screen relative z-10">
+        <Outlet />
+      </main>
+
       <ContactSection />
       <Footer />
     </div>

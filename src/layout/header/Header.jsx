@@ -1,43 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 function Header() {
-  const [showHeader, setShowHeader] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY < lastScrollY) {
-        setShowHeader(true);
-      } else {
-        setShowHeader(false);
-      }
-      setLastScrollY(window.scrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
-
   return (
-    <nav
-      className={`fixed top-0 w-full z-50 bg-black text-white transition-transform duration-300 ${
-        showHeader ? "translate-y-0" : "-translate-y-full"
-      }`}
-    >
+    <nav className="fixed top-0 w-full z-50 bg-black text-white shadow-md">
       <div className="flex justify-between items-center px-6 md:px-11 py-4">
         {/* Logo */}
         <a href="/" className="text-xl font-bold">
-          <img
-            src="/logo.png"
-            alt="Logo"
-            className="h-14 w-24 object-cover"
-          />
+          <img src="/logo.png" alt="Logo" className="h-14 w-24 object-cover" />
         </a>
 
         {/* Desktop Menu */}
-        <ul className="hidden  md:flex gap-8 items-center">
+        <ul className="hidden md:flex gap-8 items-center">
           <li><a href="/" className="hover:text-yellow-200 transition">Home</a></li>
           <li><a href="/about" className="hover:text-yellow-200 transition">About Us</a></li>
           <li><a href="/courses" className="hover:text-yellow-200 transition">Courses</a></li>

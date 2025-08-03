@@ -64,10 +64,10 @@ const ContactSection = () => {
 
             {/* Right Side: Form */}
             <motion.div
-              initial={{ opacity: 0, x: 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.7 }}
-              viewport={{ once: true }}
+              // initial={{ opacity: 0, x: 40 }}
+              // whileInView={{ opacity: 1, x: 0 }}
+              // transition={{ duration: 0.7 }}
+              // viewport={{ once: true }}
             >
               <form className="bg-white p-6 sm:p-8 rounded-xl shadow-md space-y-4 sm:space-y-5 border border-gray-200">
                 <input
