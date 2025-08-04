@@ -54,12 +54,15 @@ const FreeResourcesLanding = () => {
           Level up your sales game with our battle-tested playbooks, scripts,
           and frameworks—available at no cost.
         </motion.p>
-        <motion.button
-          className="bg-gradient-to-r from-[#C0C0C0] to-white text-black px-8 py-3 rounded-full font-semibold hover:scale-105 transition-transform"
-          {...fadeIn(0.4)}
-        >
-          let's get started
-        </motion.button>
+       <a href="#contact">
+  <motion.button
+    className="bg-gradient-to-r from-[#C0C0C0] to-white text-black px-8 py-3 rounded-full font-semibold hover:scale-105 transition-transform"
+    {...fadeIn(0.4)}
+  >
+    let&apos;s get started
+  </motion.button>
+</a>
+
       </section>
 
       {/* Resource Cards */}

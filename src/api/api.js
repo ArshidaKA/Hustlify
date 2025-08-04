@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000/api", // change if deployed
+  baseURL: "https://hustlify-backend.onrender.com/api", // change if deployed
 });
 
 // // FormData will be passed directly in frontend
@@ -12,3 +12,4 @@ const API = axios.create({
 // };
 
 export const fetchBlogs = () => API.get("/blogs");
+export const fetchBlogById = (id) => API.get(`/blogs/${id}`);

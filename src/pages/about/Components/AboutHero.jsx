@@ -50,11 +50,11 @@ const AboutSection = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="absolute top-4 left-4 bg-yellow-400 text-black px-4 py-2 sm:px-5 sm:py-3 rounded-xl shadow-xl font-bold text-base sm:text-xl"
+            className="absolute top-4 left-4 bg-yellow-200 text-black px-4 py-2 sm:px-5 sm:py-3 rounded-xl shadow-xl font-bold text-base sm:text-xl"
           >
-            <span>25+</span>
+            <span>💰</span>
             <p className="text-xs sm:text-sm font-semibold -mt-1">
-              Years of Experience
+              high ticket sales
             </p>
           </motion.div>
         </motion.div>

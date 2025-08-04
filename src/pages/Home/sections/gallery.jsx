@@ -46,7 +46,7 @@ const Services = () => {
       </div>
 
       {/* Scrollable Cards */}
-      <div className="overflow-x-auto whitespace-nowrap scrollbar-hide -mx-4 px-4">
+      <div className="overflow-x-auto whitespace-nowrap no-scrollbar -mx-4 px-4">
         <div className="flex gap-4 w-max pointer-events-auto">
           {servicesData.map((service, index) => (
             <div

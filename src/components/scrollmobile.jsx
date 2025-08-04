@@ -71,10 +71,21 @@ const SyncScrollMobile = () => {
             {section.description}
           </p>
 
-          <div className="mt-6 flex flex-wrap gap-4">
-            <button onClick={prev} className="text-white border border-gray-500 px-4 py-2 rounded-lg hover:bg-gray-700 transition">Prev</button>
-            <button onClick={next} className={`px-6 py-3 rounded-xl font-bold text-black bg-gradient-to-r ${section.accent} shadow-xl hover:scale-105 transition`}>Next →</button>
-          </div>
+          <div className="mt-6 flex flex-wrap gap-4 ml-20 sm:ml-0">
+  <button
+    onClick={prev}
+    className="text-white border border-gray-500 px-4 py-2 rounded-lg hover:bg-gray-700 transition"
+  >
+    Prev
+  </button>
+  <button
+    onClick={next}
+    className={`px-6 py-3 rounded-xl font-bold text-black bg-gradient-to-r ${section.accent} shadow-xl hover:scale-105 transition`}
+  >
+    Next →
+  </button>
+</div>
+
 
           <div className="mt-6 flex justify-center lg:justify-start space-x-2">
             {sections.map((_, index) => (

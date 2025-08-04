@@ -47,20 +47,20 @@ const blogs = [
 
 
 const BlogPage = () => {
-    const [blogs, setBlogs] = useState([]);
-     useEffect(() => {
-    const getBlogs = async () => {
-      try {
-        const { data } = await fetchBlogs();
-        setBlogs(data);
-      } catch (error) {
-        console.error("Failed to fetch blogs:", error);
-      }
-    };
+    // const [blogs, setBlogs] = useState([]);
+    //  useEffect(() => {
+    // const getBlogs = async () => {
+    //   try {
+    //     const { data } = await fetchBlogs();
+    //     setBlogs(data);
+    //   } catch (error) {
+    //     console.error("Failed to fetch blogs:", error);
+    //   }
+    // };
 
-    getBlogs();
-  }, []);
-  console.log(blogs,"nfkfld")
+  //   getBlogs();
+  // }, []);
+  // console.log(blogs,"nfkfld")
 
 
   return (
