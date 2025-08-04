@@ -43,7 +43,7 @@ const AnnualRecap = () => {
         {/* Call to Action */}
         <div className="flex justify-center">
           <a
-            href="#"
+            href="#contact"
             className="px-8 py-3 bg-white text-black font-semibold rounded-full hover:bg-gray-300 transition"
           >
             Join Hustlify Now

@@ -29,12 +29,13 @@ const Hero = () => {
           <p className="text-gray-400 font-[Poppins]">
             Develop the skills to excel in sales, marketing, client relations, and strategic growth with this 6-month training program
           </p>
-
-          <div className="flex gap-4">
-            <button className="bg-gradient-to-r from-gray-200 to-gray-300 text-black px-6 py-2 rounded-full font-semibold hover:bg-yellow-300 transition">
-              Join us - now!
-            </button>
-          </div>
+<div className="flex gap-4">
+  <a href="#contact">
+    <button className="bg-gradient-to-r from-gray-200 to-gray-300 text-black px-6 py-2 rounded-full font-semibold hover:bg-yellow-300 transition">
+      Join us – now!
+    </button>
+  </a>
+</div>
 
 <div className="hidden md:flex flex-wrap gap-8 pt-6">
             <div>
