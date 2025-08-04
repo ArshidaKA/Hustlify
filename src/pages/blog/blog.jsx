@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+
 import { Link } from "react-router-dom";
+import { fetchBlogs } from "../../api/api";
 
 const blogs = [
   { id:1,
@@ -43,7 +45,24 @@ const blogs = [
   },
 ];
 
+
 const BlogPage = () => {
+    const [blogs, setBlogs] = useState([]);
+     useEffect(() => {
+    const getBlogs = async () => {
+      try {
+        const { data } = await fetchBlogs();
+        setBlogs(data);
+      } catch (error) {
+        console.error("Failed to fetch blogs:", error);
+      }
+    };
+
+    getBlogs();
+  }, []);
+  console.log(blogs,"nfkfld")
+
+
   return (
     <div className="bg-[#f9f9f9] min-h-screen text-gray-900 font-sans">
       {/* Featured Post */}

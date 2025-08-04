@@ -8,9 +8,9 @@ function About() {
   return (
     <div>
       <AboutSection />
+    <MissionVision/>
 
     <MeetOurTeam/>
-    <MissionVision/>
 
       <AboutContent />
 
