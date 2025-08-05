@@ -25,7 +25,7 @@ const ContactModal = () => {
 
     try {
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbxrgxNCgqmXsUc6uw-9z1PgExGqPTUGRX8NLexVkRIm4w0XnurWdglvaSmS9ruyekQd/exec",
+        "https://script.google.com/macros/s/AKfycbxA3QCD39h3skkYMXaZKKPW-hp2Wk4sP7Jl90Wn4k-GqJ9r9WvCIgC67xRHhp0Gxvgk/exec",
         {
           method: "POST",
           body: new URLSearchParams(formData),

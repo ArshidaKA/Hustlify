@@ -5,7 +5,7 @@ import { FaMoneyCheck } from "react-icons/fa";
 const Hero = () => {
   return (
     <section
-      className="relative bg-transparent text-white min-h-[90vh] px-4 font-sans bg-cover bg-center"
+      className="relative bg-transparent text-white min-h-[60vh] px-4 font-sans bg-cover bg-center"
       // style={{ backgroundImage: "url('https://img.freepik.com/free-photo/3d-dark-grunge-display-background-with-smoky-atmosphere_1048-16218.jpg?semt=ais_hybrid&w=740&q=80')" }} // 🔁 Replace with your image path
     >
       <div className="absolute inset-0  bg-opacity-60 z-0" /> {/* Optional: dark overlay */}
@@ -63,7 +63,7 @@ const Hero = () => {
               muted
               loop
               playsInline
-              className="w-full  md:h-[80vh] h-[40vh] object-cover rounded-lg"
+              className="w-full  md:h-[80vh] h-[40vh] p-5  object-cover rounded-xl"
             />
           </div>
         </motion.div>

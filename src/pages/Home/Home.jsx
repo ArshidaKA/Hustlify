@@ -11,6 +11,7 @@ import SyncScrollMobile from '../../components/scrollmobile'
 import { Timeline } from '../../components/ui/timeline'
 import { GoogleGeminiEffect } from '../../components/ui/gemini'
 import GoogleGeminiScrollWrapper from '../../components/ui/geminiwrapper'
+import Fixedblock from '../../components/fixedWtp'
 
 
 const hustlifyTimeline = [
@@ -84,6 +85,7 @@ function Home() {
 </div>
 <Faq/>
 <ContactModal/>
+<Fixedblock/>
 
     </div>
   )

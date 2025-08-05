@@ -52,7 +52,7 @@ const SyncScrollMobile = () => {
   const section = sections[currentSection];
 
   return (
-    <div className=" bg-gradient-to-br from-gray-900 via-black to-gray-800 overflow-hidden">
+    <div className=" bg-gradient-to-br from-gray-900 via-black to-gray-800 mt-10 overflow-hidden">
       <div className="h-auto flex flex-col lg:flex-row items-center justify-between px-6 lg:px-16 py-12 gap-12">
         {/* Left Section */}
         <div className="w-full lg:w-1/2 max-w-2xl text-center lg:text-left">

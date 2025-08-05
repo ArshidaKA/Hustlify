@@ -1,8 +1,58 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
 
 const ContactSection = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    course: "",
+    message: "",
+  });
+  const [submitting, setSubmitting] = useState(false);
+  const [success, setSuccess] = useState(false);
+
+  const scriptURL =
+    "https://script.google.com/macros/s/AKfycbxA3QCD39h3skkYMXaZKKPW-hp2Wk4sP7Jl90Wn4k-GqJ9r9WvCIgC67xRHhp0Gxvgk/exec";
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSubmitting(true);
+    setSuccess(false);
+
+    const data = new FormData();
+    data.append("name", formData.name);
+    data.append("phone", formData.phone);
+    data.append("course", formData.course);
+    data.append("message", formData.message);
+
+    try {
+      const res = await fetch(scriptURL, {
+        method: "POST",
+        body: data,
+      });
+
+      if (res.ok) {
+        setSuccess(true);
+        setFormData({ name: "", phone: "", course: "", message: "" });
+      } else {
+        alert("Submission failed. Please try again.");
+      }
+    } catch (err) {
+      alert("Error occurred. Check your internet connection.");
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
   return (
     <div className="bg-black px-4 md:px-16">
       {/* CTA Section */}
@@ -28,7 +78,7 @@ const ContactSection = () => {
       <div className="py-14 md:py-20" id="contact">
         <section className="bg-[#f5f5f5] text-black py-14 px-4 sm:px-6 md:px-10 rounded-3xl sm:rounded-[60px] md:rounded-[100px]">
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 items-center">
-            {/* Left Side: Info */}
+            {/* Left Side */}
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -38,9 +88,6 @@ const ContactSection = () => {
               <h2 className="text-6xl font-extrabold mb-4">
                 Get <span className="text-gray-700">in Touch.</span>
               </h2>
-              {/* <p className="mb-6 text-gray-700 text-base sm:text-lg leading-relaxed">
-                Have questions or ready to collaborate? Reach out and we’ll get back to you shortly. We’re excited to hear from you!
-              </p> */}
 
               <div className="mb-6">
                 <h4 className="font-semibold text-base sm:text-lg flex items-center gap-2">
@@ -63,26 +110,35 @@ const ContactSection = () => {
             </motion.div>
 
             {/* Right Side: Form */}
-            <motion.div
-              // initial={{ opacity: 0, x: 40 }}
-              // whileInView={{ opacity: 1, x: 0 }}
-              // transition={{ duration: 0.7 }}
-              // viewport={{ once: true }}
-            >
-              <form className="bg-white p-6 sm:p-8 rounded-xl shadow-md space-y-4 sm:space-y-5 border border-gray-200">
+            <motion.div>
+              <form
+                className="bg-white p-6 sm:p-8 rounded-xl shadow-md space-y-4 sm:space-y-5 border border-gray-200"
+                onSubmit={handleSubmit}
+              >
                 <input
                   type="text"
+                  name="name"
                   placeholder="Full Name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
                   className="w-full p-3 rounded border border-gray-300 text-black placeholder-gray-500 focus:outline-black text-sm"
                 />
                 <input
                   type="tel"
+                  name="phone"
                   placeholder="Your Phone Number"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
                   className="w-full p-3 rounded border border-gray-300 text-black placeholder-gray-500 focus:outline-black text-sm"
                 />
                 <select
+                  name="course"
+                  value={formData.course}
+                  onChange={handleChange}
+                  required
                   className="w-full p-3 rounded border border-gray-300 text-black focus:outline-black text-sm"
-                  defaultValue=""
                 >
                   <option disabled value="">
                     Select Course
@@ -92,15 +148,26 @@ const ContactSection = () => {
                   <option>AI for Sales</option>
                 </select>
                 <textarea
+                  name="message"
                   placeholder="Your Message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
                   className="w-full p-3 rounded border border-gray-300 text-black h-28 sm:h-32 resize-none placeholder-gray-500 focus:outline-black text-sm"
                 />
                 <button
                   type="submit"
+                  disabled={submitting}
                   className="w-full bg-black text-white font-bold py-3 rounded hover:bg-gray-800 transition-all"
                 >
-                  SEND MESSAGE
+                  {submitting ? "SENDING..." : "SEND MESSAGE"}
                 </button>
+
+                {success && (
+                  <p className="text-green-600 text-center font-medium mt-2">
+                    Message submitted successfully!
+                  </p>
+                )}
               </form>
             </motion.div>
           </div>

@@ -7,52 +7,54 @@ const stats = [
     count: 6,
     suffix: "mo",
     title: "Training Program",
-    description: "Develop sales, marketing, and growth skills in 6 months.",
+    description: "Master sales, marketing, and growth in just 6 months.",
   },
   {
     id: 2,
     count: 1500,
     suffix: "+",
     title: "Qualified Leads",
-    description: "Learn lead generation & close high-value clients.",
+    description: "Learn to generate and convert high-quality leads.",
   },
   {
     id: 3,
     count: 500,
     suffix: "+",
     title: "Client Interactions",
-    description: "Master communication and client relationship building.",
+    description: "Sharpen your communication and trust-building skills.",
   },
   {
     id: 4,
     count: 250,
     suffix: "+",
     title: "Business Projects",
-    description: "Apply strategies on real-world growth projects.",
+    description: "Work hands-on with real businesses to grow them.",
   },
 ];
 
 const HustlifyStats = () => {
   return (
-    <section className="bg-white py-16  mt-5 px-4 md:px-12 rounded-4xl">
-      <h2 className="text-4xl font-[poppins] md:text-5xl font-bold text-center text-black mb-12">
-        Our Numbers Speak <br className="hidden md:block" /> For Themselves
-      </h2>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-        {stats.map((stat) => (
-          <div
-            key={stat.id}
-            className="bg-gray-100 rounded-lg p-6 text-center shadow-sm hover:shadow-md transition-all duration-300"
-          >
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">{stat.title}</h3>
-            <p className="text-sm text-gray-600 mb-4">{stat.description}</p>
-            <p className="text-4xl font-extrabold text-black">
-              <CountUp end={stat.count} duration={6} suffix={stat.suffix} />
-            </p>
-          </div>
-        ))}
-      </div>
+    <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 text-center">
+      {stats.map((stat, index) => (
+        <div
+          key={stat.id}
+          className={`py-14 px-6 ${
+            index % 2 === 0 ? "bg-gray-100" : "bg-gray-200"
+          }`}
+        >
+          <h3 className="text-4xl font-extrabold text-gray-800 leading-tight mb-2">
+            <CountUp
+              end={stat.count}
+              duration={4}
+              decimals={stat.count % 1 !== 0 ? 1 : 0}
+            />
+            <span className="text-gray-500 font-bold ml-1">{stat.suffix}</span>
+          </h3>
+          <p className="text-sm text-gray-600 font-medium max-w-xs mx-auto leading-snug">
+            {stat.description}
+          </p>
+        </div>
+      ))}
     </section>
   );
 };
