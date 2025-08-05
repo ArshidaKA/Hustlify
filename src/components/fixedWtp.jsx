@@ -13,14 +13,17 @@ function Fixedblock() {
   };
 
   const messageStyle = {
-    backgroundColor: '#f6fbf8ff', // WhatsApp green
-    color: 'black',
-    padding: '0.3rem 1rem',
+    backdropFilter: 'blur(10px)',
+    backgroundColor: 'rgba(255, 255, 255, 0.2)',
+    color: '#000',
+    padding: '0.4rem 1.2rem',
     borderRadius: '9999px',
     fontSize: '0.9rem',
+    fontWeight: '500',
     boxShadow: '0 6px 16px rgba(0,0,0,0.15)',
     animation: 'floatText 3s ease-in-out infinite',
     whiteSpace: 'nowrap',
+    border: '1px solid rgba(255,255,255,0.3)',
   };
 
   const linkStyle = {
@@ -28,7 +31,7 @@ function Fixedblock() {
     width: '4rem',
     height: '4rem',
     borderRadius: '50%',
-    boxShadow: '0 8px 20px rgba(108, 81, 81, 0.2)',
+    boxShadow: '0 8px 20px rgba(0,0,0,0.2)',
     transition: 'transform 0.3s ease',
     animation: 'floatIcon 2s ease-in-out infinite',
     backgroundColor: 'white',
@@ -75,7 +78,6 @@ function Fixedblock() {
 
       <div style={containerStyle} className="floating-wtp">
         <span style={messageStyle}>Hi, let’s talk!</span>
-
         <a
           href="https://wa.me/9048644333"
           target="_blank"

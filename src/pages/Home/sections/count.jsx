@@ -39,16 +39,16 @@ const HustlifyStats = () => {
         <div
           key={stat.id}
           className={`py-14 px-6 ${
-            index % 2 === 0 ? "bg-gray-100" : "bg-gray-200"
+            index % 2 === 0 ? "bg-yellow-100" : "bg-yellow-200"
           }`}
         >
-          <h3 className="text-4xl font-extrabold text-gray-800 leading-tight mb-2">
+          <h3 className="text-4xl font-extrabold text-gray-900 leading-tight mb-2">
             <CountUp
               end={stat.count}
               duration={4}
               decimals={stat.count % 1 !== 0 ? 1 : 0}
             />
-            <span className="text-gray-500 font-bold ml-1">{stat.suffix}</span>
+            <span className="text-gray-900 font-bold ml-1">{stat.suffix}</span>
           </h3>
           <p className="text-sm text-gray-600 font-medium max-w-xs mx-auto leading-snug">
             {stat.description}

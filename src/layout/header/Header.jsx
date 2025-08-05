@@ -9,7 +9,7 @@ function Header() {
       <div className="max-w-[1400px] mx-auto px-4 md:px-0 py-3 flex items-center justify-between relative">
         {/* Logo - Left */}
         <a href="/" className="flex-shrink-0 z-50">
-          <img src="/logo.png" alt="Logo" className="h-17 w-24 object-contain" />
+          <img src="/logo.png" alt="Logo" className="h-16 w-24 object-contain" />
         </a>
 
         {/* Center Nav Links */}

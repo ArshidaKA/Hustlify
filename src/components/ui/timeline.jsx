@@ -56,7 +56,7 @@ export const Timeline = ({ data }) => {
         {item.title}
       </h3>
 
-      <div className="text-gray-100 text-lg leading-relaxed space-y-4">
+      <div className="text-gray-100 text-sm md:text-lg leading-relaxed space-y-4">
         {item.content}
 
         {item.image && (
