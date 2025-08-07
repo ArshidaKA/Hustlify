@@ -57,23 +57,34 @@ const ContactSection = () => {
     <div className="bg-black px-4 md:px-16">
       {/* CTA Section */}
       <section className="text-white py-20 flex flex-col md:flex-row justify-between items-center rounded-3xl">
-        <div className="text-left mb-10 md:mb-0">
-          <h2 className="text-6xl sm:text-8xl font-bold leading-tight">
-            Ready?
-            <br />
-            <span className="text-gray-500">Let's Talk.</span>
-          </h2>
-        </div>
-        <div>
-          <a
-            href="#contact"
-            className="bg-white hover:bg-gray-800 text-black font-semibold text-sm md:text-base py-3 px-6 md:px-8 rounded-lg transition duration-300"
-          >
-            Contact Now
-          </a>
-        </div>
-      </section>
+  <motion.div
+    className="text-left mb-10 md:mb-0"
+    initial={{ opacity: 0, x: -50 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.6 }}
+    viewport={{ once: true }}
+  >
+    <h2 className="text-6xl sm:text-8xl font-bold leading-tight">
+      Ready?
+      <br />
+      <span className="text-gray-500">Let's Talk.</span>
+    </h2>
+  </motion.div>
 
+  <motion.div
+    initial={{ opacity: 0, scale: 0.8 }}
+    whileInView={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.5, delay: 0.2 }}
+    viewport={{ once: true }}
+  >
+    <a
+      href="#contact"
+      className="bg-white hover:bg-gray-800 text-black font-semibold text-sm md:text-base py-3 px-6 md:px-8 rounded-lg transition duration-300"
+    >
+      Contact Now
+    </a>
+  </motion.div>
+</section>
       {/* Contact Section */}
       <div className="py-14 md:py-20" id="contact">
         <section className="bg-[#f5f5f5] text-black py-14 px-4 sm:px-6 md:px-10 rounded-3xl sm:rounded-[60px] md:rounded-[100px]">

@@ -6,7 +6,7 @@ import ContactSection from '../components/Contact';
 
 function MainLayout() {
   return (
-    <div className="relative min-h-screen text-white overflow-x-hidden">
+    <div className="relative min-h-screen text-white ">
       {/* Background Image Layer */}
       <div className="fixed inset-0 -z-10">
         <img

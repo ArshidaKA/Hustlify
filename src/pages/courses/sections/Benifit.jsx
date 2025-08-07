@@ -5,6 +5,21 @@ import {
   FaLaptopCode,
   FaBrain,
 } from "react-icons/fa";
+import { motion } from "framer-motion";
+
+// Animation variants
+const fadeInUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (i = 1) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.2,
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  }),
+};
 
 const benefitItems = [
   {
@@ -37,51 +52,72 @@ const WhyChooseHustlify = () => {
   return (
     <section className="bg-white px-6 py-20 text-gray-800 font-sans">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-3 gap-10 items-center">
-        {/* Left Column (Benefits) */}
+        {/* Left Column */}
         <div className="space-y-6 col-span-1 flex flex-col gap-6">
           {benefitItems.slice(0, 2).map((item, index) => (
-            <div
+            <motion.div
               key={index}
+              custom={index}
+              variants={fadeInUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
               className="bg-teal-800 text-white p-6 rounded-xl shadow-lg space-y-2"
             >
-              <div className="text-white">{item.icon}</div>
+              <div>{item.icon}</div>
               <h4 className="font-bold text-lg">{item.title}</h4>
               <p className="text-sm text-gray-200">{item.description}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
 
         {/* Center Image */}
-        <div className="rounded-xl overflow-hidden shadow-lg">
+        <motion.div
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="rounded-xl overflow-hidden shadow-lg"
+        >
           <img
             src="https://img.freepik.com/free-photo/group-people-working-out-business-plan-office_1303-15861.jpg"
             alt="Why Choose Hustlify"
             className="object-cover w-full h-full max-h-[500px]"
           />
-        </div>
+        </motion.div>
 
-        {/* Right Column (Benefits + Heading) */}
+        {/* Right Column */}
         <div className="col-span-1 flex flex-col gap-6">
-          <div className="text-center lg:text-left">
+          <motion.div
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="text-center lg:text-left"
+          >
             <h2 className="text-3xl font-bold text-black mb-2">
               WHY <span className="text-teal-800">CHOOSE US?</span>
             </h2>
             <p className="text-gray-600 text-sm">
-              Everyday we work hard to make life of our clients better and
-              happier.
+              Everyday we work hard to make life of our clients better and happier.
             </p>
-          </div>
+          </motion.div>
 
           <div className="space-y-6">
             {benefitItems.slice(2).map((item, index) => (
-              <div
+              <motion.div
                 key={index}
+                custom={index + 2}
+                variants={fadeInUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
                 className="bg-black text-white p-6 rounded-xl shadow-lg space-y-2"
               >
                 <div>{item.icon}</div>
                 <h4 className="font-bold text-lg">{item.title}</h4>
                 <p className="text-sm text-gray-300">{item.description}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

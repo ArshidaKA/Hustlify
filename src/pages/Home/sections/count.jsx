@@ -39,7 +39,7 @@ const HustlifyStats = () => {
         <div
           key={stat.id}
           className={`py-14 px-6 ${
-            index % 2 === 0 ? "bg-yellow-100" : "bg-yellow-200"
+            index % 2 === 0 ? "bg-gray-100" : "bg-white"
           }`}
         >
           <h3 className="text-4xl font-extrabold text-gray-900 leading-tight mb-2">

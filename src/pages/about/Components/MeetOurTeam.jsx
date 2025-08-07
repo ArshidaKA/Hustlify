@@ -69,15 +69,15 @@ const HustlifyTeam = () => {
             transition={{ duration: 0.6, delay: member.delay, ease: "easeOut" }}
             whileHover={{ scale: 1.05 }}
           >
-            {/* Image with frame style */}
+            {/* Image Frame */}
             <div className="relative p-4">
-              <div className="relative w-full max-w-[240px] aspect-[3/4] mx-auto">
+              <div className="relative w-full max-w-[240px] aspect-[3/4] mx-auto overflow-hidden rounded-md">
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-70 object-contain grayscale z-10 relative"
+                  className="w-full h-70 object-contain grayscale z-0 relative"
                 />
-                <div className="absolute top-6 left-2 right-4 bottom-9 border-r-[10px] border-b-[8px] border-yellow-200 pointer-events-none -z-0" />
+                <div className="absolute top-6 left-2 right-2 bottom-9 border-r-[10px] border-b-[8px] border-yellow-200 pointer-events-none -z-0" />
               </div>
             </div>
 

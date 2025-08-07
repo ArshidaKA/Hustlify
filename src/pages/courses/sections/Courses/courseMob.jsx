@@ -2,7 +2,7 @@
 import { GoArrowDownLeft } from "react-icons/go";
 import "./courses.css"
 
-export const MobWorkSection = () => {
+export const MobWorkSection = () => {tjohm
   const items = [
   {
     image: "https://s44783.pcdn.co/in/wp-content/uploads/sites/3/2022/03/What-is-the-Difference-Between-Sales-and-Marekting-1.jpg.webp",

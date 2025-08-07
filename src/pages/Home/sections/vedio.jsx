@@ -1,4 +1,19 @@
 import React from "react";
+import { motion } from "framer-motion";
+
+const containerVariants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const fadeUpVariant = {
+  hidden: { opacity: 0, y: 40 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+};
 
 const AnnualRecap = () => {
   return (
@@ -13,18 +28,33 @@ const AnnualRecap = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto text-center">
-        <p className="text-gray-400 font-medium tracking-wide uppercase text-sm sm:text-base mb-3">
+      <motion.div
+        className="relative z-10 max-w-5xl mx-auto text-center"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        <motion.p
+          className="text-gray-400 font-medium tracking-wide uppercase text-sm sm:text-base mb-3"
+          variants={fadeUpVariant}
+        >
           # Hustlify Sales Training
-        </p>
+        </motion.p>
 
-        <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-10 leading-tight bg-gradient-to-r from-white via-gray-200 to-white text-transparent bg-clip-text">
+        <motion.h2
+          className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-10 leading-tight bg-gradient-to-r from-white via-gray-200 to-white text-transparent bg-clip-text"
+          variants={fadeUpVariant}
+        >
           High-Ticket Closer <br />
-          in <span className="text-gray-400">4 Months.</span>
-        </h2>
+          in <span className="bg-gradient-to-r from-gray-800 to-gray-300 text-transparent bg-clip-text">4 Months.</span>
+        </motion.h2>
 
         {/* YouTube Iframe */}
-        <div className="relative w-full max-w-4xl mx-auto mb-12 rounded-2xl overflow-hidden border-4 border-gray-700 shadow-xl aspect-video">
+        <motion.div
+          className="relative w-full max-w-4xl mx-auto mb-12 rounded-2xl overflow-hidden border-4 border-gray-700 shadow-xl aspect-video"
+          variants={fadeUpVariant}
+        >
           <iframe
             className="absolute top-0 left-0 w-full h-full"
             src="https://www.youtube.com/embed/NV6TtjPoYgA?si=HQn6f-po0TCd7tGx"
@@ -34,18 +64,18 @@ const AnnualRecap = () => {
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
           ></iframe>
-        </div>
+        </motion.div>
 
         {/* CTA Button */}
-        <div>
+        <motion.div variants={fadeUpVariant}>
           <a
             href="#contact"
             className="inline-block px-8 py-3 bg-white text-black font-semibold rounded-full hover:bg-gray-200 transition"
           >
             Join Hustlify Now
           </a>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

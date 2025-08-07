@@ -23,12 +23,27 @@ function Header() {
 
         {/* Contact Us - Right */}
         <div className="hidden md:flex">
-          <a
-            href="#contact"
-            className="bg-gradient-to-r from-yellow-100 to-yellow-200 text-black px-5 py-2 rounded-full text-sm font-semibold hover:opacity-90 transition"
-          >
-            Contact Us
-          </a>
+        <a href="#contact">
+    <button className="flex items-center bg-white text-black px-4 py-1 rounded-full font-medium shadow-md hover:scale-105 transition">
+      <span className="">contact</span>
+      <span className="w-8 h-8 flex items-center justify-center rounded-full bg-white text-black">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-4 h-4"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={3}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M17 7L7 17M17 7H9M17 7V15"
+          />
+        </svg>
+      </span>
+    </button>
+  </a>
         </div>
 
         {/* Mobile Menu Button */}

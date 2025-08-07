@@ -9,6 +9,15 @@ const cardVariants = {
   }),
 };
 
+const titleVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { delay: 0.1, duration: 0.8, ease: "easeOut" },
+  },
+};
+
 const cards = [
   {
     title: "Introducing High-Ticket Sales",
@@ -33,14 +42,23 @@ const cards = [
 const SalesCardsSection = () => {
   return (
     <div className="bg-transparent text-white pt-20 md:py-20 px-4 md:px-28 font-sans relative z-10">
-      <div className="mb-16 max-w-3xl ">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={titleVariants}
+        className="mb-16 max-w-3xl"
+      >
         <h2 className="text-slate-100 text-4xl md:text-6xl mb-4 font-bold leading-tight font-[Poppins]">
-          What You’ll Master <br/> at  <span className="text-gray-400">Hustlify?</span>
+          What You’ll Master <br /> at{" "}
+<span className="bg-gradient-to-r from-gray-800 to-gray-300 text-transparent bg-clip-text">
+            Hustlify?
+          </span>
         </h2>
         <p className="text-gray-400 text-lg md:text-xl">
           A revolutionary sales training program built for those who are tired of watching life from the sidelines.
         </p>
-      </div>
+      </motion.div>
 
       <div className="grid md:grid-cols-3 gap-10">
         {cards.map((card, i) => (

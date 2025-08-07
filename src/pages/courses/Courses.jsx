@@ -2,13 +2,12 @@ import React from 'react';
 import HustlifyHero from './sections/CourseHero';
 import HustlifyBenefits from './sections/Benifit';
 import Testimonials from '../Home/sections/Testimonials';
-import {  PopularCourses } from './sections/Courses/course';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import HustlifyWelcome from './sections/join';
 import SalesCardsSection from '../Home/sections/SalesCard';
 import { Timeline } from '../../components/ui/timeline';
 import { MobWorkSection } from './sections/Courses/courseMob';
-
+import Courses1 from './sections/Courses/course';
 function Courses() {
 const hustlifyTimeline = [
   {
@@ -64,8 +63,8 @@ const isMobile = window.innerWidth < 768;
   return (
     <ParallaxProvider>
       <HustlifyHero />
+      <Courses1 />
 
-       {isMobile?<MobWorkSection/>:<PopularCourses />}
       <SalesCardsSection/>
       <Timeline data={hustlifyTimeline} />
       
