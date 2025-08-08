@@ -42,10 +42,11 @@ const HustlifyHero = () => {
           </p>
 
           <div className="flex items-center gap-4 flex-wrap">
+            <a href="#contact">
             <button className="bg-white text-black px-6 py-3 rounded-full font-semibold flex items-center gap-2 text-base shadow-lg hover:bg-gray-200 transition">
               Start now <FaArrowRight />
             </button>
-
+</a>
             <div className="flex items-center gap-2 border-l pl-4 border-white/30">
               <div className="flex text-yellow-400 text-sm">
                 {[...Array(5)].map((_, i) => (

@@ -14,14 +14,14 @@ const Hero = () => {
           transition={{ duration: 0.6 }}
           className="space-y-6"
         >
-          <p className="flex items-center gap-2 text-sm text-green-400 font-[Poppins]">
+          <p className="flex items-center gap-2 text-sm text-yellow-200 font-[Poppins]">
             <FaMoneyCheck />
             Welcome to <a href="/" className="underline">Hustlify</a>
           </p>
 
-          <h1 className="text-4xl sm:text-5xl md:text-7xl  font-bold leading-tight font-[Poppins]">
-            Unlock <span className="underline decoration-gray-200">High </span ><br />
-           <span className="bg-gradient-to-r from-gray-700 to-gray-300 text-transparent bg-clip-text">Ticket Sales.</span>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl  font-bold leading-tight">
+            Unlock <span className="underline decoration-gray-200">High </span ><br />Ticket
+           <span className="bg-gradient-to-r from-gray-300 to-gray-500 text-transparent bg-clip-text"> Sales Mastery.</span>
           </h1>
 
           <p className="text-gray-400 font-[Poppins] text-base sm:text-lg max-w-md">

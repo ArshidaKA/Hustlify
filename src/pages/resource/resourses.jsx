@@ -17,11 +17,21 @@ const masterclassData = [
     title: "Closer’s Pre-Pitch Checklist",
     pdf: "/assets/close.pdf",
     description:
-      "If you don’t know this, don’t pitch yet.\nProblem: What challenge are they facing?\nPain Level: How emotionally urgent is it?\nCurrent Situation: Where are they now?\nDesired Outcome: What result do they truly want?\nBudget: Can they afford this solution?\nRoadblocks: What’s slowing them down?",
+      "If you don’t know this, don’t pitch yet.\nProblem: What challenge are they facing?\nPain Level: How emotionally urgent is it?\nCurrent Situation: Where are they now?\nDesired Outcome: What result do they truly want?\nBudget: Can they afford this solution?\nRoadblocks: What’s slowing them down?...",
     buttonText: "Download",
     image:
       "https://img.freepik.com/free-photo/sales-sell-selling-commerce-costs-profit-retail-concept_53876-132327.jpg",
   },
+  
+  {
+  title: "Sales Flow – 5-Stage Closing Framework",
+  description:
+    "Step-by-step guide to becoming a confident high-ticket closer. This short playbook reveals a 5-stage process that turns beginners into natural closers without pressure tactics....",
+  buttonText: "Download",
+  pdf: "/assets/salesflow.pdf",
+  image:
+    "https://www.ceotodaymagazine.com/wp-content/uploads/2023/02/iStock-1349380508.jpg",
+}
 ];
 
 const fadeInUp = {
