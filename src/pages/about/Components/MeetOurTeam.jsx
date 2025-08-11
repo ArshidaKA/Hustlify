@@ -75,7 +75,7 @@ const HustlifyTeam = () => {
               <div className="relative w-full max-w-[240px] aspect-[3/4] mx-auto overflow-hidden rounded-md">
                 <img
                   src={member.image}
-                  alt="founders of"
+                  alt="founders of hustlify"
                   className="w-full h-70 object-contain grayscale z-0 relative"
                 />
                 <div className="absolute top-6 left-2 right-2 bottom-9 border-r-[10px] border-b-[8px] border-yellow-200 pointer-events-none -z-0" />
