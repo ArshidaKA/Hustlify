@@ -11,7 +11,7 @@ const ContactSection = () => {
   });
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
-
+console.log("fg")
   const scriptURL =
     "https://script.google.com/macros/s/AKfycbxA3QCD39h3skkYMXaZKKPW-hp2Wk4sP7Jl90Wn4k-GqJ9r9WvCIgC67xRHhp0Gxvgk/exec";
 
