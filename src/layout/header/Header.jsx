@@ -6,7 +6,7 @@ function Header() {
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-black text-gray-200 shadow-md">
-      <div className="max-w-[1400px] mx-auto px-4 md:px-0 py-3 flex items-center justify-between relative">
+<div className="max-w-[1400px] mx-auto px-4 md:px-0 px-custom py-3 flex items-center justify-between relative">
         {/* Logo - Left */}
         <a href="/" className="flex-shrink-0 z-50">
           <img src="/logo.png" alt="Logo" className="h-16 w-24 object-contain" />
@@ -15,10 +15,10 @@ function Header() {
         {/* Center Nav Links */}
         <ul className="hidden md:flex gap-10 text-md font-normal absolute left-1/2 transform -translate-x-1/2">
           <li><a href="/" className="hover:text-yellow-200 transition">Home</a></li>
-          <li><a href="/about" className="hover:text-yellow-200 transition">About Us</a></li>
+          <li><a href="/about" className="hover:text-yellow-200 transition">About </a></li>
           <li><a href="/courses" className="hover:text-yellow-200 transition">Courses</a></li>
           <li><a href="/resources" className="hover:text-yellow-200 transition">Resources</a></li>
-          <li><a href="/blog" className="hover:text-yellow-200 transition">Blog</a></li>
+          {/* <li><a href="/blog" className="hover:text-yellow-200 transition">Blog</a></li> */}
         </ul>
 
         {/* Contact Us - Right */}
@@ -64,7 +64,7 @@ function Header() {
         <a onClick={() => setMenuOpen(false)} href="/about">About Us</a>
         <a onClick={() => setMenuOpen(false)} href="/courses">Courses</a>
         <a onClick={() => setMenuOpen(false)} href="/resources">Resources</a>
-        <a onClick={() => setMenuOpen(false)} href="/blog">Blog</a>
+        {/* <a onClick={() => setMenuOpen(false)} href="/blog">Blog</a> */}
         <a
           onClick={() => setMenuOpen(false)}
           href="#contact"

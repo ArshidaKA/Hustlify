@@ -5,7 +5,7 @@ import { FaMoneyCheck } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <section className="relative bg-transparent text-white  px-6 md:px-17 py-20 font-sans bg-cover bg-center">
+<section className="relative bg-transparent text-white px-6 md:px-17 px-custom py-20 font-sans bg-cover bg-center">
       <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* Left Content */}
         <motion.div

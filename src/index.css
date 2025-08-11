@@ -21,3 +21,13 @@ body {
 .no-scrollbar::-webkit-scrollbar {
   display: none; /* Chrome, Safari, and Opera */
 }
+
+
+@layer utilities {
+  @media (min-width: 765px) and (max-width: 1450px) {
+    .px-custom {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+}

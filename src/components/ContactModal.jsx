@@ -53,29 +53,33 @@ const ContactModal = () => {
         <div
           ref={modalRef}
           onClick={handleOutsideClick}
-          className="fixed inset-0 bg-black/40 backdrop-blur-sm mt-12 flex items-center justify-center z-50 px-4"
+          className="fixed inset-0 bg-black/40 backdrop-blur-sm  flex items-center  justify-center z-50 px-3 sm:px-4"
         >
-          <form
-            onSubmit={handleSubmit}
-            className="bg-white border border-gray-200 font-sans w-full max-w-lg sm:max-w-md p-6 sm:p-8 rounded-2xl shadow-xl space-y-6 sm:space-y-9 relative overflow-y-auto max-h-[90vh]"
-          >
+         <form
+  onSubmit={handleSubmit}
+  className="bg-white border border-gray-200 font-sans w-full max-w-lg sm:max-w-md p-4 sm:p-6 rounded-2xl shadow-xl space-y-4 sm:space-y-6 relative max-h-[85vh] overflow-y-auto no-scrollbar"
+>
+
+            {/* Close button */}
             <button
               type="button"
               onClick={() => setShowModal(false)}
-              className="absolute top-4 right-4 text-2xl font-bold text-gray-500 hover:text-black"
+              className="absolute top-3 right-3 text-2xl sm:text-3xl font-bold text-gray-500 hover:text-black"
             >
               &times;
             </button>
 
+            {/* Title */}
             <div>
               <h6 className="text-xs uppercase tracking-wide text-gray-400 mb-1">
                 Contact Us
               </h6>
-              <h4 className="text-3xl font-bold text-black">
+              <h4 className="text-xl sm:text-2xl font-bold text-black leading-snug">
                 Get <span className="text-gray-600">in Touch</span>
               </h4>
             </div>
 
+            {/* Name */}
             <input
               type="text"
               name="name"
@@ -84,6 +88,7 @@ const ContactModal = () => {
               className="w-full text-sm border border-gray-300 p-3 rounded-lg bg-white text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black/60"
             />
 
+            {/* Phone */}
             <input
               type="text"
               name="phoneNumber"
@@ -92,6 +97,7 @@ const ContactModal = () => {
               className="w-full text-sm border border-gray-300 p-3 rounded-lg bg-white text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black/60"
             />
 
+            {/* Select */}
             <select
               name="service"
               required
@@ -108,6 +114,7 @@ const ContactModal = () => {
               <option value="ui&ux">UI & UX Designing</option>
             </select>
 
+            {/* Message */}
             <textarea
               name="message"
               placeholder="Your Message"
@@ -116,6 +123,7 @@ const ContactModal = () => {
               className="w-full text-sm border border-gray-300 p-3 rounded-lg bg-white text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black/60"
             ></textarea>
 
+            {/* Submit */}
             <div className="text-center">
               <button
                 type="submit"
@@ -134,8 +142,9 @@ const ContactModal = () => {
         </div>
       )}
 
+      {/* Toast */}
       {toastMsg && (
-        <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-black text-white px-4 py-2 rounded shadow-lg z-50 text-sm sm:text-base">
+        <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-black text-white px-3 py-2 rounded shadow-lg z-50 text-xs sm:text-sm">
           {toastMsg}
         </div>
       )}
