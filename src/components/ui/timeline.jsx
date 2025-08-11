@@ -29,7 +29,7 @@ export const Timeline = ({ data }) => {
     >
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
         <h2 className="text-4xl md:text-6xl font-bold mb-4 max-w-4xl text-gray-100">
-          Hustlify Masterclass <span className="bg-gradient-to-r from-gray-800 to-gray-300 text-transparent bg-clip-text"> Roadmap</span>
+          Hustlify  Masterclass <span className="bg-gradient-to-r from-gray-800 to-gray-300 text-transparent bg-clip-text"> Roadmap</span>
         </h2>
         <p className="text-neutral-400 text-sm md:text-base max-w-md">
           Follow the journey to becoming a sales closer. Here's the changelog of the masterclass milestones.
