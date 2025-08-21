@@ -18,9 +18,9 @@ const AboutSection = () => {
           transition={{ duration: 0.8 }}
           className="flex flex-col items-center justify-center"
         >
-          <h2 className="text-4xl sm:text-6xl md:text-8xl text-white font-bold mb-2 leading-tight">
+          <h1 className="text-4xl sm:text-6xl md:text-8xl text-white font-bold mb-2 leading-tight">
             About Us.
-          </h2>
+          </h1>
           <p className="text-xs sm:text-sm uppercase tracking-widest text-gray-400">
             Hustlify &gt; About Us
           </p>
