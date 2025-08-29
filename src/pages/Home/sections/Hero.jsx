@@ -20,8 +20,8 @@ const Hero = () => {
           </p>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl  font-bold leading-tight">
-            Unlock <span className="underline decoration-gray-200">High </span ><br />Ticket
-           <span className="bg-gradient-to-r from-gray-300 to-gray-500 text-transparent bg-clip-text"> Sales Mastery.</span>
+            Best <span className="underline decoration-gray-200">Sales </span ><br />Training
+           <span className="bg-gradient-to-r from-gray-300 to-gray-500 text-transparent bg-clip-text"> program.</span>
           </h1>
 
           <p className="text-gray-400 font-[Poppins] text-base sm:text-lg max-w-md">
