@@ -95,6 +95,7 @@ const AboutSection = () => {
                 {item}
               </motion.p>
             ))}
+            <link rel="stylesheet" href="" />
           </div>
 
           <motion.button
