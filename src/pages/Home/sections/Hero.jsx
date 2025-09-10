@@ -20,18 +20,17 @@ const Hero = () => {
           </p>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl  font-bold leading-tight">
-            Best <span className="underline decoration-gray-200">Sales </span ><br />Training
+           Accelerate <span className="underline decoration-gray-200">Your Career</span ><br />  with India’s Leading Sales Training
            <span className="bg-gradient-to-r from-gray-300 to-gray-500 text-transparent bg-clip-text"> program.</span>
           </h1>
 
           <p className="text-gray-400 font-[Poppins] text-base sm:text-lg max-w-md">
-            Develop elite-level skills in sales and strategic business growth with Hustlify’s 6-month intensive training.
-          </p>
+ Master elite sales and business growth skills in just 4 months with Hustlify’s intensive program          </p>
 
          <div className="flex flex-wrap gap-4">
   <a href="#contact">
     <button className="flex items-center bg-white text-black px-4 py-2 rounded-full font-medium shadow-md hover:scale-105 transition">
-      <span className="mr-2">Join now</span>
+      <span className="mr-2">Book a Free Consultation</span>
       <span className="w-8 h-8 flex items-center justify-center rounded-full bg-black text-white">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -53,26 +52,7 @@ const Hero = () => {
 </div>
 
 
-          {/* Stats Section */}
-<div className="hidden md:flex flex-wrap gap-10 pt-8">
-            <div className="min-w-[120px]">
-              <p className="text-2xl font-bold text-white font-[Poppins]">
-                <CountUp end={4} duration={2} />X Faster
-              </p>
-              <p className="text-sm text-gray-400 font-[Poppins]">
-                Sales Conversion Speed
-              </p>
-            </div>
 
-            <div className="min-w-[120px]">
-              <p className="text-2xl font-bold text-white font-[Poppins]">
-                <CountUp end={98} duration={2} />%
-              </p>
-              <p className="text-sm text-gray-400 font-[Poppins]">
-                Trainees Land Clients Within 30 Days
-              </p>
-            </div>
-          </div>
         </motion.div>
 
         {/* Right Content: Responsive YouTube Video */}
