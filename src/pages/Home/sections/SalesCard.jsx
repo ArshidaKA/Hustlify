@@ -20,20 +20,20 @@ const titleVariants = {
 
 const cards = [
   {
-    title: "Introducing High-Ticket Sales",
+    title: "100% Practical Learning",
     text: "Understand what makes ₹50K+ products/services sell. Learn buyer behavior in premium markets and unlock the world of premium clients.",
     btn: "Master High-Ticket Selling",
     img: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=80",
   },
   {
-    title: "Foundation of Sales",
-    text: "Master rapport building, trust, and persuasion. Get the exact structure of effective conversations that convert leads into loyal customers.",
+    title: "	  Leadership Growth",
+    text: "Gain skills that open doors to leadership roles and high-earning career paths in sales and beyond.",
     btn: "Learn Sales Psychology",
     img: "https://assets.entrepreneur.com/content/3x2/2000/20180713183338-GettyImages-881542122.jpeg",
   },
   {
-    title: "Practice with Real Feedback",
-    text: "Train with mock deals and get real-time feedback. Build muscle memory and real confidence in every conversation.",
+    title: "	Dedicated Career Support",
+    text: "Access exclusive coaching, interview prep, and job placement assistance to jumpstart your career.",
     btn: "Start Training Now",
     img: "https://sitescdn.wearevennture.co.uk/public/paretousa/mediahub/sales%20training-deb753bf-888c-4d37-8db6-85a0c56e3761.jpg",
   },

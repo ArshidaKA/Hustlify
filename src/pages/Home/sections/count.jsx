@@ -4,10 +4,10 @@ import CountUp from "react-countup";
 const stats = [
   {
     id: 1,
-    count: 6,
+    count: 4,
     suffix: "mo",
     title: "Training Program",
-    description: "Master sales, marketing, and growth in just 6 months.",
+    description: "Master elite sales, marketing, and business growth skills in just 4 months.",
   },
   {
     id: 2,
