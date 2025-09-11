@@ -5,9 +5,9 @@ import { FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
 const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: "",
-    phone: "",
-    course: "",
-    message: "",
+    phoneNumber:"",
+ service: "",
+     message: "",
   });
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -29,8 +29,8 @@ const ContactSection = () => {
 
     const data = new FormData();
     data.append("name", formData.name);
-    data.append("phone", formData.phone);
-    data.append("course", formData.course);
+    data.append("phone", formData.phoneNumber);
+    data.append("course", formData.service);
     data.append("message", formData.message);
 
     try {
@@ -41,7 +41,7 @@ const ContactSection = () => {
 
       if (res.ok) {
         setSuccess(true);
-        setFormData({ name: "", phone: "", course: "", message: "" });
+        setFormData({ name: "",    phoneNumber: "", service: "", message: "" });
       } else {
         alert("Submission failed. Please try again.");
       }
