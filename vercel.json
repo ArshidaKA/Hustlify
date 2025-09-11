@@ -1,8 +1,16 @@
 {
-  "rewrites": [
+  "headers": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "source": "/(.*\\.(jpg|jpeg|png|gif|svg|webp))",
+      "headers": [
+        { "key": "Cache-Control", "value": "max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/(.*\\.(css|js|woff2?|ttf|eot))",
+      "headers": [
+        { "key": "Cache-Control", "value": "max-age=31536000, immutable" }
+      ]
     }
   ]
 }
