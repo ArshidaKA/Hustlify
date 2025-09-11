@@ -107,7 +107,7 @@ const ContactModal = () => {
               <option value="" disabled>
                 Select Course
               </option>
-              <option value="bde">Sales</option>
+              <option value="sales">Sales</option>
             
             </select>
 

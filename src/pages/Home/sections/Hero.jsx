@@ -19,7 +19,7 @@ const Hero = () => {
             Welcome to <a href="/" className="underline">Hustlify</a>
           </p>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl  font-bold leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-5xl  font-bold leading-tight">
            Accelerate <span className="underline decoration-gray-200">Your Career</span ><br />  with India’s Leading Sales Training
            <span className="bg-gradient-to-r from-gray-300 to-gray-500 text-transparent bg-clip-text"> program.</span>
           </h1>
