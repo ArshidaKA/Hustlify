@@ -13,8 +13,7 @@ const ContactSection = () => {
   const [success, setSuccess] = useState(false);
 
   const scriptURL =
-    "https://script.google.com/macros/s/AKfycbxA3QCD39h3skkYMXaZKKPW-hp2Wk4sP7Jl90Wn4k-GqJ9r9WvCIgC67xRHhp0Gxvgk/exec";
-
+"https://script.google.com/macros/s/AKfycbwhjvRhhq34YejPYo5EJamT57rczcwxDoM3_EkhVHhRO0Nfd7pHcnx3elWjD2q0PSVFeQ/exec";
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({

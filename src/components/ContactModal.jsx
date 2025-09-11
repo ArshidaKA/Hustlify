@@ -25,7 +25,7 @@ const ContactModal = () => {
 
     try {
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbxA3QCD39h3skkYMXaZKKPW-hp2Wk4sP7Jl90Wn4k-GqJ9r9WvCIgC67xRHhp0Gxvgk/exec",
+        "https://script.google.com/macros/s/AKfycbwhjvRhhq34YejPYo5EJamT57rczcwxDoM3_EkhVHhRO0Nfd7pHcnx3elWjD2q0PSVFeQ/exec",
         {
           method: "POST",
           body: new URLSearchParams(formData),
@@ -101,11 +101,8 @@ const ContactModal = () => {
               <option value="" disabled>
                 Select Course
               </option>
-              <option value="bde">Business Development Executive</option>
-              <option value="mern">Web Development (MERN)</option>
-              <option value="mean">Web Development (MEAN)</option>
-              <option value="appdevelopment">App Development</option>
-              <option value="ui&ux">UI & UX Designing</option>
+              <option value="bde">Sales</option>
+            
             </select>
 
             <textarea
