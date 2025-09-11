@@ -137,7 +137,7 @@ const ContactSection = () => {
                 />
                 <input
                   type="tel"
-                  name="phone"
+              name="phoneNumber"
                   placeholder="Your Phone Number"
                   value={formData.phone}
                   onChange={handleChange}
@@ -147,7 +147,7 @@ const ContactSection = () => {
 
                 {/* ✅ Only Sales Course option */}
                 <select
-                  name="course"
+              name="service"
                   value={formData.course}
                   onChange={handleChange}
                   required
