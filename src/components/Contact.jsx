@@ -139,7 +139,7 @@ const ContactSection = () => {
                   type="tel"
               name="phoneNumber"
                   placeholder="Your Phone Number"
-                  value={formData.phone}
+                  value={formData.phoneNumber}
                   onChange={handleChange}
                   required
                   className="w-full p-3 rounded border border-gray-300 text-black placeholder-gray-500 focus:outline-black text-sm"
@@ -148,7 +148,7 @@ const ContactSection = () => {
                 {/* ✅ Only Sales Course option */}
                 <select
               name="service"
-                  value={formData.course}
+                  value={formData.service}
                   onChange={handleChange}
                   required
                   className="w-full p-3 rounded border border-gray-300 text-black focus:outline-black text-sm"
