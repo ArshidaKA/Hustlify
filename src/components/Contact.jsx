@@ -28,10 +28,11 @@ const ContactSection = () => {
     setSuccess(false);
 
     const data = new FormData();
-    data.append("name", formData.name);
-    data.append("phone", formData.phoneNumber);
-    data.append("course", formData.service);
-    data.append("message", formData.message);
+data.append("name", formData.name);
+data.append("phoneNumber", formData.phoneNumber); // use phoneNumber
+data.append("service", formData.service);         // use service
+data.append("message", formData.message);
+
 
     try {
       const res = await fetch(scriptURL, {
