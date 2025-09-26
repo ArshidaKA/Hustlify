@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "routes": [
+    {
+      "src": "/(.*)\\.(png|jpg|jpeg|gif|webp|svg)$",
+      "headers": {
+        "Cache-Control": "public, max-age=2592000, immutable"
+      }
+    },
+    {
+      "src": "/(.*)\\.(css|js)$",
+      "headers": {
+        "Cache-Control": "public, max-age=2592000, immutable"
+      }
+    },
+    {
+      "src": "/(robots\\.txt|sitemap\\.xml)",
+      "dest": "/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}
