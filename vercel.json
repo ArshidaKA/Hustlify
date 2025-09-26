@@ -12,6 +12,14 @@
       "headers": {
         "Cache-Control": "public, max-age=2592000, immutable"
       }
+    },
+    {
+      "src": "/(robots\\.txt|sitemap\\.xml)",
+      "dest": "/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
