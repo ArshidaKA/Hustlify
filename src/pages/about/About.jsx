@@ -5,98 +5,77 @@ import MeetOurTeam from './Components/MeetOurTeam';
 import AboutContent from './Components/AboutContent';
 import MissionVision from './Components/vision';
 
-function AboutContent() {
+function About() {
   return (
-    <section className="py-12 px-4 md:px-12 max-w-5xl mx-auto text-gray-800 leading-relaxed">
-      <h1 className="text-3xl md:text-4xl font-bold mb-6 text-center">
-        About Hustlify – Best Sales Training Institute in Calicut, Kerala
-      </h1>
+    <div>
+      <Helmet>
+        <title>About Hustlify | Best Sales Training Institute in Calicut, Kerala</title>
+        <meta
+          name="description"
+          content="Hustlify is the top-rated Sales Training Institute in Calicut, Kerala. Learn high-ticket closing, advanced sales techniques, and get guaranteed job placement with our 4-month practical training program."
+        />
+        <meta
+          name="keywords"
+          content="Sales Training Institute in Calicut, Best Sales Training in Kerala, Hustlify Institute, High-Ticket Closing Course, Sales Training with Job Placement, Sales Course Calicut"
+        />
+        <link rel="canonical" href="https://www.hustlify.in/about-us" />
 
-      <p className="mb-6 text-lg">
-        <strong>Hustlify Institute</strong> is a leading{" "}
-        <strong>Sales Training Institute in Calicut</strong> dedicated to
-        helping individuals master the art of selling and communication. Based
-        in HiLITE Business Park, Calicut, Kerala — Hustlify offers India’s most
-        practical and result-driven{" "}
-        <strong>sales training program</strong> designed for students,
-        professionals, and entrepreneurs who want to build a successful career
-        in sales.
-      </p>
+        {/* Open Graph / Social Sharing */}
+        <meta property="og:title" content="About Hustlify | Sales Training Experts in India" />
+        <meta
+          property="og:description"
+          content="Meet the team behind Hustlify – India’s leading institute for sales training and high-ticket closing with job placement support."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.hustlify.in/about-us" />
+        <meta property="og:image" content="https://www.hustlify.in/images/hustlify-banner.jpg" />
 
-      <h2 className="text-2xl font-semibold mt-10 mb-4">
-        Our Mission – Empowering the Next Generation of Sales Professionals
-      </h2>
-      <p className="mb-6">
-        Our mission is simple — to create confident, result-oriented sales
-        professionals who can close high-value deals and achieve financial
-        freedom. Through our{" "}
-        <strong>4-month practical sales training program</strong>, we combine
-        classroom learning with live sales practice, mock calls, and one-on-one
-        mentorship.
-      </p>
+        {/* SEO Crawling */}
+        <meta name="robots" content="index, follow" />
 
-      <h2 className="text-2xl font-semibold mt-10 mb-4">
-        Why Choose Hustlify in Calicut?
-      </h2>
-      <ul className="list-disc list-inside space-y-2">
-        <li>
-          <strong>Practical Sales Training:</strong> 80% of our sessions are
-          focused on real-world practice, not theory.
-        </li>
-        <li>
-          <strong>High-Ticket Closing:</strong> Learn to close deals worth ₹50K+
-          with confidence and strategy.
-        </li>
-        <li>
-          <strong>Guaranteed Placement Support:</strong> You only pay after you
-          secure a job in sales — that’s our promise.
-        </li>
-        <li>
-          <strong>Experienced Mentors:</strong> Get trained by industry experts
-          with years of sales and business experience.
-        </li>
-        <li>
-          <strong>Strong Network:</strong> Join a growing community of
-          sales-driven individuals across Kerala and India.
-        </li>
-      </ul>
+        {/* FAQ Schema JSON-LD */}
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What is Hustlify?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Hustlify is a sales training institute in Calicut, India, offering high-ticket closing courses and job placement support for students."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Who is the founder of Hustlify?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Hustlify was co-founded by Sarang P, Adish Vinayk PV, Midhun Raj, and Adhil — experienced sales mentors passionate about high-ticket closing."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Where is Hustlify located?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Hustlify is located at HiLITE Business Park, Palazhi, Calicut, Kerala, India."
+                  }
+                }
+              ]
+            }
+          `}
+        </script>
+      </Helmet>
 
-      <h2 className="text-2xl font-semibold mt-10 mb-4">
-        Our Founders and Team
-      </h2>
-      <p className="mb-6">
-        Hustlify was founded by <strong>Sarang P</strong>,{" "}
-        <strong>Adish Vinayk PV</strong>, <strong>Midhun Raj</strong>, and{" "}
-        <strong>Adhil</strong> — four passionate sales mentors who turned their
-        experience in high-ticket closing into a mission to uplift young talent.
-        Their hands-on approach and proven strategies have helped hundreds of
-        students become confident, skilled, and employable professionals.
-      </p>
-
-      <h2 className="text-2xl font-semibold mt-10 mb-4">
-        Join Kerala’s No.1 Sales Training Institute
-      </h2>
-      <p className="mb-6">
-        Whether you’re a fresher looking for your first job or a working
-        professional aiming for career growth, Hustlify helps you level up with
-        expert-led, practical training. Our program focuses on{" "}
-        <strong>sales psychology, communication, high-ticket closing, and
-        real-world sales execution</strong>.
-      </p>
-
-      <p className="text-lg font-medium mt-6">
-        Visit us at HiLITE Business Park, Calicut, Kerala — or call{" "}
-        <a
-          href="tel:+919048644333"
-          className="text-blue-600 underline hover:text-blue-800"
-        >
-          +91 90486 44333
-        </a>{" "}
-        to learn more about Kerala’s best{" "}
-        <strong>Sales Training Institute in Calicut</strong>.
-      </p>
-    </section>
+      <AboutSection />
+      <MissionVision />
+      <MeetOurTeam />
+      <AboutContent />
+    </div>
   );
 }
 
-export default AboutContent;
+export default About;
