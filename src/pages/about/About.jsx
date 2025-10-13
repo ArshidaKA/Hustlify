@@ -2,7 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import AboutSection from './Components/AboutHero';
 import MeetOurTeam from './Components/MeetOurTeam';
-import AboutContent from './Components/AboutContent';
 import MissionVision from './Components/vision';
 
 function AboutContent() {
