@@ -9,6 +9,7 @@ function About() {
   return (
     <div>
       <Helmet>
+        {/* Page Title & Meta */}
         <title>About Hustlify | Best Sales Training Institute in Calicut, Kerala</title>
         <meta
           name="description"
@@ -30,39 +31,69 @@ function About() {
         <meta property="og:url" content="https://www.hustlify.in/about-us" />
         <meta property="og:image" content="https://www.hustlify.in/images/hustlify-banner.jpg" />
 
-        {/* SEO Crawling */}
+        {/* Robots */}
         <meta name="robots" content="index, follow" />
 
-        {/* FAQ Schema JSON-LD */}
+        {/* ✅ Combined JSON-LD for LocalBusiness + FAQPage */}
         <script type="application/ld+json">
           {`
             {
               "@context": "https://schema.org",
-              "@type": "FAQPage",
-              "mainEntity": [
+              "@graph": [
                 {
-                  "@type": "Question",
-                  "name": "What is Hustlify?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Hustlify is a sales training institute in Calicut, India, offering high-ticket closing courses and job placement support for students."
-                  }
+                  "@type": "LocalBusiness",
+                  "name": "Hustlify Institute",
+                  "image": "https://www.hustlify.in/images/hustlify-banner.jpg",
+                  "url": "https://www.hustlify.in",
+                  "telephone": "+91-9048644333",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "7th Floor, HiLITE Business Park, Palazhi",
+                    "addressLocality": "Calicut",
+                    "addressRegion": "Kerala",
+                    "postalCode": "673014",
+                    "addressCountry": "IN"
+                  },
+                  "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": "11.2560",
+                    "longitude": "75.7765"
+                  },
+                  "openingHours": "Mo-Sa 10:00-18:00",
+                  "sameAs": [
+                    "https://www.facebook.com/hustlify",
+                    "https://www.instagram.com/hustlify",
+                    "https://www.linkedin.com/company/hustlify"
+                  ]
                 },
                 {
-                  "@type": "Question",
-                  "name": "Who is the founder of Hustlify?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Hustlify was co-founded by Sarang P, Adish Vinayk PV, Midhun Raj, and Adhil — experienced sales mentors passionate about high-ticket closing."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Where is Hustlify located?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Hustlify is located at HiLITE Business Park, Palazhi, Calicut, Kerala, India."
-                  }
+                  "@type": "FAQPage",
+                  "mainEntity": [
+                    {
+                      "@type": "Question",
+                      "name": "What is Hustlify?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Hustlify is a sales training institute in Calicut, India, offering high-ticket closing courses and job placement support for students."
+                      }
+                    },
+                    {
+                      "@type": "Question",
+                      "name": "Who is the founder of Hustlify?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Hustlify was co-founded by Sarang P, Adish Vinayk PV, Midhun Raj, and Adhil — experienced sales mentors passionate about high-ticket closing."
+                      }
+                    },
+                    {
+                      "@type": "Question",
+                      "name": "Where is Hustlify located?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Hustlify is located at HiLITE Business Park, Palazhi, Calicut, Kerala, India."
+                      }
+                    }
+                  ]
                 }
               ]
             }
@@ -70,6 +101,7 @@ function About() {
         </script>
       </Helmet>
 
+      {/* Page Sections */}
       <AboutSection />
       <MissionVision />
       <MeetOurTeam />
