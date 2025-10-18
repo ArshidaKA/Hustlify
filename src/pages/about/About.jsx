@@ -46,7 +46,7 @@ function About() {
                   "image": "https://www.hustlify.in/images/hustlify-banner.jpg",
                   "url": "https://www.hustlify.in",
                   "telephone": "+91-9048644333",
-                  "priceRange": "₹10,000,
+                  "priceRange": "₹10,000",
                   "address": {
                     "@type": "PostalAddress",
                     "streetAddress": "7th Floor, HiLITE Business Park, Palazhi",
