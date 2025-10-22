@@ -52,19 +52,21 @@ const AnnualRecap = () => {
 
         {/* YouTube Iframe */}
         <motion.div
-          className="relative w-full max-w-4xl mx-auto mb-12 rounded-2xl overflow-hidden border-4 border-gray-700 shadow-xl aspect-video"
-          variants={fadeUpVariant}
-        >
-          <iframe
-            className="absolute top-0 left-0 w-full h-full"
-            src="https://www.youtube.com/embed/NV6TtjPoYgA?si=HQn6f-po0TCd7tGx"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-          ></iframe>
-        </motion.div>
+  className="relative w-full max-w-4xl mx-auto mb-12 rounded-2xl overflow-hidden border-4 border-gray-700 shadow-xl aspect-video"
+  variants={fadeUpVariant}
+>
+  <iframe
+    width="900"
+    height="500"
+    src="https://www.youtube.com/embed/-6tX_vg1qyU?si=P9AQfDHqVEyWyX0N"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen
+  ></iframe>
+</motion.div>
+
 
         {/* CTA Button */}
         <motion.div variants={fadeUpVariant}>
