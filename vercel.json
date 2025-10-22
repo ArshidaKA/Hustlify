@@ -2,7 +2,7 @@
   "version": 2,
   "routes": [
     {
-      "src": "/(.*)\\.(png|jpg|jpeg|gif|webp|svg)$",
+      "src": "/(.*)\\.(png|jpg|jpeg|gif|webp|svg|pdf)$",
       "headers": {
         "Cache-Control": "public, max-age=2592000, immutable"
       }
