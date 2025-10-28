@@ -5,8 +5,27 @@
     <link rel="icon" type="image/jpeg" href="/hust.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QFXZBV1JNB"></script>
-<script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://www.youtube.com" />
+    <link rel="preconnect" href="https://www.entrepreneur.com" />
+    <link rel="preconnect" href="https://images.contentstack.io" />
+
+    <!-- ✅ Preload main font to reduce LCP -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- ✅ Defer Google Tag (lazy load after paint) -->
+    <script>
+  window.addEventListener("load", function () {
+    setTimeout(() => {
+      const gtagScript = document.createElement("script");
+      gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-QFXZBV1JNB";
+      gtagScript.async = true;
+      document.head.appendChild(gtagScript);
+    }, 2000); // lazy-load 2 seconds after onload
+  });
+     
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
@@ -27,9 +46,7 @@
 <meta name="twitter:title" content="Sales Training Companies in India | Hustlify Institute" />
 <meta name="twitter:description" content="4-month practical sales training in Calicut — high-ticket closing, live practice & placement support." />
 <meta name="twitter:image" content="https://www.hustlify.in/images/hustlify-banner.jpg" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 
 
 <!-- Combined JSON-LD for Organization + Course + FAQ (example) -->
