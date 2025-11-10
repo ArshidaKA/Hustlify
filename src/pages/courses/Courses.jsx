@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from "react-helmet-async";
 import HustlifyHero from './sections/CourseHero';
 import HustlifyBenefits from './sections/Benifit';
 import Testimonials from '../Home/sections/Testimonials';
@@ -62,6 +63,19 @@ const hustlifyTimeline = [
 const isMobile = window.innerWidth < 768;
   return (
     <ParallaxProvider>
+      <Helmet>
+        <title>Sales Training Courses | Hustlify</title>
+        <meta
+          name="description"
+          content="Join Hustlify’s intensive sales training courses designed to turn you into a professional closer. Learn real-world sales, marketing, and negotiation skills with live mentorship."
+        />
+        <meta
+          name="keywords"
+          content="sales training, hustlify courses, sales program, sales skills, sales career, sales certification"
+        />
+        <link rel="canonical" href="https://www.hustlify.in/courses" />
+      </Helmet>
+
       <HustlifyHero />
       <Courses1 />
 
