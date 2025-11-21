@@ -1,21 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Meta Pixel Code -->
-<!-- Meta Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1108488677781202');
-  fbq('track', 'PageView');
-</script>
-
+    
     <meta charset="UTF-8" />
     <link rel="icon" type="image/jpeg" href="/hust.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,22 +18,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
     <!-- ✅ Defer Google Tag (lazy load after paint) -->
-    <script>
-  window.addEventListener("load", function () {
-    setTimeout(() => {
-      const gtagScript = document.createElement("script");
-      gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-QFXZBV1JNB";
-      gtagScript.async = true;
-      document.head.appendChild(gtagScript);
-    }, 2000); // lazy-load 2 seconds after onload
-  });
-     
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+      <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-QFXZBV1JNB");
 
-  gtag('config', 'G-QFXZBV1JNB');
-</script>
+    window.addEventListener("load", function () {
+      setTimeout(() => {
+        const gtagScript = document.createElement("script");
+        gtagScript.src =
+          "https://www.googletagmanager.com/gtag/js?id=G-QFXZBV1JNB";
+        gtagScript.async = true;
+        document.head.appendChild(gtagScript);
+      }, 2000);
+    });
+  </script>
+
     <meta name="google-site-verification" content="N4Rx3iK9LnzjG1m5x7-eiEDlo_gVDc737oAY_th_fNk" />
     <title>Sales Training Companies in India | Hustlify Institute</title>
     <meta name="description" content="Discover the best Sales Training Companies in India. Learn how to choose the right sales training provider to boost your team’s performance and close more deals">
@@ -197,6 +184,37 @@
 }
 </script>
 <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Sales Training Program",
+    "brand": "Hustlify Institute",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "327"
+    }
+  }
+  </script>
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Sales Training Companies in India",
+    "description": "A detailed guide comparing the top sales training companies in India.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Hustlify Institute",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.hustlify.in/images/hustlify-banner.jpg"
+      }
+    },
+    "mainEntityOfPage": "https://www.hustlify.in/sales-training-companies-india.html"
+  }
+  </script>
+
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -225,6 +243,7 @@
   </head>
   <body>
   <noscript> 
+  <div>
   <h1>Sales Training Companies in India: Complete Guide</h1>
 <p>
 Hustlify Institute is one of the leading <strong>sales training companies in India</strong>, offering the <strong>best sales training program</strong> in Calicut and across Kerala. Our 4-month practical program is designed to help you <strong>master high-ticket closing</strong>, boost confidence, and achieve <em>guaranteed job placement</em>. 
@@ -315,7 +334,7 @@ Visit the <a href="/about-us.html">About Hustlify</a> page to learn about our me
 access exclusive <a href="/resources.html">sales training materials and tips</a> to improve your closing skills,  
 or <a href="/contact.html">enroll in our Sales Training in Kerala</a> today to start your journey toward a high-income sales career. 
 </p>
-
+</div>
      </noscript>
 <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
