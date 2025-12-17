@@ -1,29 +1,11 @@
 {
-  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
   "routes": [
-    {
-      "src": "/robots.txt",
-      "dest": "/robots.txt"
-    },
-    {
-      "src": "/sitemap.xml",
-      "dest": "/sitemap.xml"
-    },
-    {
-      "src": "/(.*)\\.(png|jpg|jpeg|gif|webp|svg|pdf)$",
-      "headers": {
-        "Cache-Control": "public, max-age=2592000, immutable"
-      }
-    },
-    {
-      "src": "/(.*)\\.(css|js)$",
-      "headers": {
-        "Cache-Control": "public, max-age=2592000, immutable"
-      }
-    },
     {
       "src": "/(.*)",
       "dest": "/index.html"
     }
   ]
 }
+
