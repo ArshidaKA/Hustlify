@@ -11,10 +11,6 @@
       "dest": "/robots.txt"
     },
     {
-      "src": "/(.*\\.(js|css|png|jpg|svg|json|wasm))",
-      "dest": "/$1"
-    },
-    {
       "src": "/(.*)",
       "dest": "/index.html"
     }
