@@ -3,7 +3,8 @@
   "outputDirectory": "dist",
   "routes": [
     {
-      "handle": "filesystem"
+      "src": "/(.*\\.(js|css|png|jpg|svg|json|wasm))",
+      "dest": "/$1"
     },
     {
       "src": "/(.*)",
@@ -11,5 +12,3 @@
     }
   ]
 }
-
-
