@@ -3,29 +3,31 @@
   <head>
     
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/jpeg" href="/hust.jpg" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Google tag (gtag.js) -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFXZBV1JNB"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-QFXZBV1JNB', { page_path: window.location.pathname });
-    </script>
+     <script>
+  window.addEventListener('load', function () {
+    const s = document.createElement('script');
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-QFXZBV1JNB';
+    s.async = true;
+    document.head.appendChild(s);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QFXZBV1JNB');
+  });
+</script>
+
      
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://www.youtube.com" />
-    <link rel="preconnect" href="https://www.entrepreneur.com" />
-    <link rel="preconnect" href="https://images.contentstack.io" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- ✅ Preload main font to reduce LCP -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
-    <!-- ✅ Defer Google Tag (lazy load after paint) -->
-
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'">
 
     <meta name="google-site-verification" content="N4Rx3iK9LnzjG1m5x7-eiEDlo_gVDc737oAY_th_fNk" />
     <title>Sales Training Companies in India | Hustlify Institute</title>
@@ -215,8 +217,8 @@
 </script>
 </head>
   <body>
-<noscript>
-  <div>
+
+ <div id="root">
   <h1>Sales Training Companies in India: Complete Guide</h1>
 <p>
 Hustlify Institute is one of the leading <strong>sales training companies in India</strong>, offering the <strong>best sales training program</strong> in Calicut and across Kerala. Our 4-month practical program is designed to help you <strong>master high-ticket closing</strong>, boost confidence, and achieve <em>guaranteed job placement</em>. 
@@ -364,12 +366,11 @@ access exclusive <a href="/resources/">sales training materials and tips</a> to 
 or <a href="/contact/">enroll in our Sales Training in Kerala</a> today to start your journey toward a high-income sales career.
 </p>
   
-</noscript>
+
 
 </div>
-  
-<div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <script type="module" src="/src/main.jsx" defer></script>
+
 </body>
 </html>
 
