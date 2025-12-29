@@ -3,8 +3,12 @@
   "outputDirectory": "dist",
   "routes": [
     {
-      "src": "/(.*\\.(js|css|png|jpg|svg|json|wasm))",
-      "dest": "/$1"
+      "src": "/sitemap.xml",
+      "dest": "/sitemap.xml"
+    },
+    {
+      "src": "/robots.txt",
+      "dest": "/robots.txt"
     },
     {
       "src": "/(.*)",
