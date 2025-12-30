@@ -1,13 +1,10 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "routes": [
+  "rewrites": [
     {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/404",
-      "dest": "/404.html"
+      "source": "/((?!sitemap.xml|robots.txt).*)",
+      "destination": "/index.html"
     }
   ]
 }
