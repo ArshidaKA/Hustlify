@@ -6,8 +6,7 @@
       "handle": "filesystem"
     },
     {
-      "src": "/.*",
-      "status": 404,
+      "src": "/404",
       "dest": "/404.html"
     }
   ]
