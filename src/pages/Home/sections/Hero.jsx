@@ -19,10 +19,10 @@ const Hero = () => {
             Welcome to <a href="/" className="underline">Hustlify</a>
           </p>
 
-          <h2 className="text-4xl sm:text-5xl md:text-5xl  font-bold leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-5xl  font-bold leading-tight">
            Accelerate <span className="decoration-gray-200">Your Career</span ><br />  with India’s Leading Sales Training
            <span className="bg-gradient-to-r from-gray-300 to-gray-500 text-transparent bg-clip-text"> program.</span>
-          </h2>
+          </h1>
 
           <p className="text-gray-400 font-[Poppins] text-base sm:text-lg max-w-md">
  Master elite sales and business growth skills in just 4 months with Hustlify’s intensive program          </p>
