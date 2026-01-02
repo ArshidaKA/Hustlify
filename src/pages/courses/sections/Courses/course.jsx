@@ -9,7 +9,7 @@ const Courses1 = () => {
       heading: "Foundation Training",
       description:
         "Kickstart your journey with 2 months of offline, high-intensity classroom training — 3-4 days a week. Experience real-time sales call breakdowns, live simulations, high-pressure challenge days, and continuous progress tracking with peer learning.",
-      link: "https://www.hustlify.in/sales-program"
+      link: "https://www.hustlify.in/about"
     },
     {
       image:
@@ -18,7 +18,7 @@ const Courses1 = () => {
       heading: "Real Internship",
       description:
         "Work directly with real companies for 2 months and gain hands-on experience in inbound and outbound selling. Learn to manage pipelines, handle leads, and track sales using CRM tools. Get weekly reviews and real-time feedback.",
-      link: "https://www.hustlify.in/sales-program"
+      link: "https://www.hustlify.in/about"
     },
     {
       image:
@@ -27,7 +27,7 @@ const Courses1 = () => {
       heading: "What You’ll Master",
       description:
         "Understand how to sell products and services worth ₹50K+. Learn buyer behavior in premium markets, psychological triggers that influence decisions, urgency creation, and value stacking for maximum impact.",
-      link: "https://www.hustlify.in/sales-program"
+      link: "https://www.hustlify.in/about"
     },
     {
       image:
@@ -36,7 +36,7 @@ const Courses1 = () => {
       heading: "The Closer’s Protocol",
       description:
         "Master Hustlify’s Closing Framework — from 'Hello' to 'Paid'. Build confidence in sales conversations, learn to handle objections effectively, and practice with mock deals and real-time simulations.",
-      link: "https://www.hustlify.in/sales-program"
+      link: "https://www.hustlify.in/about"
     }
   ];
 
