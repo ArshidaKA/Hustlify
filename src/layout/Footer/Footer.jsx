@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="flex justify-center gap-5 mb-6">
         <FooterIcon
           Icon={FaFacebookF}
-          link="https://www.facebook.com/share/1B1cP8rrrL/"
+          link="https://www.facebook.com/hustlifysalestraining/"
         />
         <FooterIcon
           Icon={FaInstagram}
@@ -15,11 +15,11 @@ const Footer = () => {
         />
         <FooterIcon
           Icon={FaLinkedinIn}
-          link="https://www.linkedin.com/company/talkease-co?trk=experience-timeline"
+          link="https://www.linkedin.com/company/hustlify-sales-school/"
         />
         <FooterIcon
           Icon={FaYoutube}
-          link="https://youtube.com/@hustlify_in?si=k5JwGDvEuR8Krl4d"
+          link="https://www.youtube.com/@Hustlify_in"
         />
       </div>
       <p className="text-sm text-white/90">
