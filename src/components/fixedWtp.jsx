@@ -79,7 +79,7 @@ function Fixedblock() {
       <div style={containerStyle} className="floating-wtp">
         <span style={messageStyle}>Hi, let’s talk!</span>
         <a
-          href="https://wa.me/9048644333"
+          href="https://wa.me/9048643334"
           target="_blank"
           rel="noopener noreferrer"
           style={linkStyle}

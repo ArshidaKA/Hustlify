@@ -45,7 +45,7 @@ function About() {
           "name": "Hustlify Institute",
           "image": "https://www.hustlify.in/images/hustlify-banner.jpg",
           "url": "https://www.hustlify.in",
-          "telephone": "+91-9048644333",
+          "telephone": "+91-9048643334",
           "priceRange": "₹10,000",
           "address": {
             "@type": "PostalAddress",

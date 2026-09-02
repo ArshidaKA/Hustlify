@@ -116,7 +116,7 @@ data.append("message", formData.message);
                   <FaEnvelope className="text-black" />
                   Contact Us
                 </h4>
-                <p className="text-gray-600 ml-7 text-sm sm:text-base">+91 90486 44333</p>
+                <p className="text-gray-600 ml-7 text-sm sm:text-base">+91 90486 43334</p>
                 <p className="text-gray-600 ml-7 text-sm sm:text-base">hustlify.in@gmail.com</p>
               </div>
             </motion.div>
